@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/normalize.css" />
+		<title>store management application</title>
+	</head>
+	<body>
+		<main class="dashboard-page d-flex">
+			<div id="sidebar"></div>
+			<div class="body flex-1">
+				<div id="header"></div>
+				<h1>Dashboard</h1>
+				<div class="d-flex gap-3 dashboard-box flex-column flex-lg-row p-2">
+					<div class="material">
+						<div class="inward">
+							<h2>Inward Material</h2>
+							<a href="./inward.html">
+								<table>
+									<thead>
+										<tr>
+											<th>Invoice No</th>
+											<th>Party Name</th>
+											<th>Material Details</th>
+											<th>Department</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>SSM100025</td>
+											<td>Lucky Paper Cone</td>
+											<td>Timing Belt 5mm<br /><span>View more (2)</span></td>
+											<td>Spinning</td>
+										</tr>
+										<tr>
+											<td>SSM100028</td>
+											<td>Suwathi Paper Cone</td>
+											<td>Timing Belt 5mm<br /><span>View more (20)</span></td>
+											<td>Spinning</td>
+										</tr>
+										<tr>
+											<td>SSM100029</td>
+											<td>Sri Paper Cone</td>
+											<td>Timing Belt 5mm<br /><span>View more (23)</span></td>
+											<td>Spinning</td>
+										</tr>
+										<tr>
+											<td>SSM100029</td>
+											<td>Lucky Paper Cone</td>
+											<td>Timing Belt 5mm<br /><span>View more (23)</span></td>
+											<td>Spinning</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>See All list</td>
+										</tr>
+									</tfoot>
+								</table>
+							</a>
+						</div>
+						<div class="outward">
+							<h2>Outward Material</h2>
+							<a href="./outward-inside.html">
+								<table>
+									<thead>
+										<tr>
+											<th>Date</th>
+											<th>Material Details</th>
+											<th>Who Takes</th>
+											<th>Department</th>
+											<th>Qty</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>11/11/23</td>
+											<td>Timing Belt 5mm<br /><span>View more (2)</span></td>
+											<td>R. Raja</td>
+											<td>Spinning</td>
+											<td>235</td>
+										</tr>
+										<tr>
+											<td>11/11/23</td>
+											<td>Timing Belt 5mm<br /><span>View more (20)</span></td>
+											<td>R. Raja</td>
+											<td>Spinning</td>
+											<td>102</td>
+										</tr>
+										<tr>
+											<td>11/11/23</td>
+											<td>Timing Belt 5mm<br /><span>View more (23)</span></td>
+											<td>R. Raja</td>
+											<td>Spinning</td>
+											<td>125</td>
+										</tr>
+										<tr>
+											<td>11/11/23</td>
+											<td>Timing Belt 5mm<br /><span>View more (23)</span></td>
+											<td>R. Raja</td>
+											<td>Spinning</td>
+											<td>144</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>See All list</td>
+										</tr>
+									</tfoot>
+								</table>
+							</a>
+						</div>
+					</div>
+					<div class="report">
+						<div class="monthly">
+							<h2>Monthly Report</h2>
+							<div class="chart position-relative">
+								<p class="y">Units of Inward & Outward</p>
+								<div class="line y"></div>
+								<div class="line x"></div>
+								<div
+									class="info d-flex gap-2 align-items-center justify-content-center"
+								>
+									<div
+										class="inward-info d-flex gap-2 align-items-center justify-content-center"
+									>
+										<div class="box"></div>
+										<p>Inward</p>
+									</div>
+									<div
+										class="outward-info d-flex gap-2 align-items-center justify-content-center"
+									>
+										<div class="box"></div>
+										<p>Outward</p>
+									</div>
+								</div>
+								<div
+									class="bars d-flex justify-content-center align-items-center gap-2"
+								>
+									<div
+										data-month="Jan"
+										class="unit d-flex gap-1 position-relative align-items-end"
+									>
+										<div data-num="2.22" class="inward position-relative"></div>
+										<div
+											data-num="4.22"
+											class="outward position-relative"
+										></div>
+									</div>
+									<div
+										data-month="Feb"
+										class="unit d-flex gap-1 position-relative align-items-end"
+									>
+										<div data-num="3.22" class="inward position-relative"></div>
+										<div
+											data-num="2.52"
+											class="outward position-relative"
+										></div>
+									</div>
+									<div
+										data-month="March"
+										class="unit d-flex gap-1 position-relative align-items-end"
+									>
+										<div data-num="3.92" class="inward position-relative"></div>
+										<div
+											data-num="2.22"
+											class="outward position-relative"
+										></div>
+									</div>
+									<div
+										data-month="April"
+										class="unit d-flex gap-1 position-relative align-items-end"
+									>
+										<div data-num="3.12" class="inward position-relative"></div>
+										<div
+											data-num="2.22"
+											class="outward position-relative"
+										></div>
+									</div>
+									<div
+										data-month="May"
+										class="unit d-flex gap-1 position-relative align-items-end"
+									>
+										<div data-num="4.22" class="inward position-relative"></div>
+										<div
+											data-num="2.22"
+											class="outward position-relative"
+										></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="yearly">
+							<h2>Yearly Report</h2>
+							<div class="chart position-relative">
+								<p class="y">Units of Inward & Outward</p>
+								<div class="line y"></div>
+								<div class="line x"></div>
+								<div
+									class="info d-flex gap-2 align-items-center justify-content-center"
+								>
+									<div
+										class="inward-info d-flex gap-2 align-items-center justify-content-center"
+									>
+										<div class="box"></div>
+										<p>Inward</p>
+									</div>
+									<div
+										class="outward-info d-flex gap-2 align-items-center justify-content-center"
+									>
+										<div class="box"></div>
+										<p>Outward</p>
+									</div>
+								</div>
+								<div
+									class="bars d-flex justify-content-center align-items-center gap-2"
+								>
+									<div
+										data-month="2019"
+										class="unit d-flex gap-1 position-relative align-items-end"
+									>
+										<div data-num="2.22" class="inward position-relative"></div>
+										<div
+											data-num="4.22"
+											class="outward position-relative"
+										></div>
+									</div>
+									<div
+										data-month="2020"
+										class="unit d-flex gap-1 position-relative align-items-end"
+									>
+										<div data-num="3.22" class="inward position-relative"></div>
+										<div
+											data-num="2.52"
+											class="outward position-relative"
+										></div>
+									</div>
+									<div
+										data-month="2021"
+										class="unit d-flex gap-1 position-relative align-items-end"
+									>
+										<div data-num="3.92" class="inward position-relative"></div>
+										<div
+											data-num="2.22"
+											class="outward position-relative"
+										></div>
+									</div>
+									<div
+										data-month="2022"
+										class="unit d-flex gap-1 position-relative align-items-end"
+									>
+										<div data-num="3.12" class="inward position-relative"></div>
+										<div
+											data-num="2.22"
+											class="outward position-relative"
+										></div>
+									</div>
+									<div
+										data-month="2023"
+										class="unit d-flex gap-1 position-relative align-items-end"
+									>
+										<div data-num="4.22" class="inward position-relative"></div>
+										<div
+											data-num="2.22"
+											class="outward position-relative"
+										></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- js -->
+		<script src="js/home.js"></script>
+		<script src="js/sidebar.js"></script>
+		<script src="js/header.js"></script>
+	</body>
+</html>
