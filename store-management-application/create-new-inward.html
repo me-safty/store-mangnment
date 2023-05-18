@@ -10,7 +10,7 @@
 		<title>store management application</title>
 	</head>
 	<body>
-		<main class="new-inward-page d-flex">
+		<main class="new-inward-page d-flex position-relative">
 			<div id="sidebar"></div>
 			<div class="body flex-1">
 				<div id="header"></div>
@@ -71,48 +71,239 @@
 						<div>
 							<button>+ Add Item</button>
 						</div>
-						<table>
-							<thead>
-								<tr>
-									<th>S.No</th>
-									<th>Material</th>
-									<th>Qty</th>
-									<th>Department</th>
-									<th>Action</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>Timing Belt 5mm<br /><span>View more (2)</span></td>
-									<td>R. Raja</td>
-									<td><img src="assets/inward/del.svg" alt="del" /></td>
-								</tr>
-								<tr>
-									<td>1</td>
-									<td>Timing Belt 5mm<br /><span>View more (20)</span></td>
-									<td>R. Raja</td>
-									<td><img src="assets/inward/del.svg" alt="del" /></td>
-								</tr>
-								<tr>
-									<td>1</td>
-									<td>Timing Belt 5mm<br /><span>View more (23)</span></td>
-									<td>R. Raja</td>
-									<td><img src="assets/inward/del.svg" alt="del" /></td>
-								</tr>
-								<tr>
-									<td>1</td>
-									<td>Timing Belt 5mm<br /><span>View more (23)</span></td>
-									<td>R. Raja</td>
-									<td><img src="assets/inward/del.svg" alt="del" /></td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td>See All list</td>
-								</tr>
-							</tfoot>
-						</table>
+						<div class="table">
+							<div class="row head">
+								<div class="col-1">S.No</div>
+								<div class="col-3">Material</div>
+								<div class="col-3">Qty</div>
+								<div class="col-3">Department</div>
+								<div class="col-2">Action</div>
+							</div>
+							<div class="body">
+								<div class="row">
+									<div class="col-1">1</div>
+									<div class="col-3">
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected"></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-3 d-flex gap-2 justify-content-center">
+										<input type="number" />
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected">kg</span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">kg</li>
+												<li>kg</li>
+												<li>kg</li>
+												<li>kg</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected"></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-2">
+										<img src="assets/inward/del.svg" alt="del" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-1">1</div>
+									<div class="col-3">
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected"></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-3 d-flex gap-2 justify-content-center">
+										<input type="number" />
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected">kg</span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">kg</li>
+												<li>kg</li>
+												<li>kg</li>
+												<li>kg</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected"></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-2">
+										<img src="assets/inward/del.svg" alt="del" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-1">1</div>
+									<div class="col-3">
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected"></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-3 d-flex gap-2 justify-content-center">
+										<input type="number" />
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected">kg</span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">kg</li>
+												<li>kg</li>
+												<li>kg</li>
+												<li>kg</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected"></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-2">
+										<img src="assets/inward/del.svg" alt="del" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-1">1</div>
+									<div class="col-3">
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected"></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-3 d-flex gap-2 justify-content-center">
+										<input type="number" />
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected">kg</span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">kg</li>
+												<li>kg</li>
+												<li>kg</li>
+												<li>kg</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="dropdown">
+											<div class="select">
+												<span class="selected"></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-2">
+										<img src="assets/inward/del.svg" alt="del" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="save-btn">
+							<button>Save & Continue</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- popup -->
+			<div
+				class="overlay new-inward-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+			>
+				<div class="popup bg-white">
+					<div
+						class="head d-flex gap-2 justify-content-center align-items-center"
+					>
+						<p>New Inward Added Successfully</p>
+						<img src="assets/login/tick.svg" alt="tick" />
+					</div>
+					<div class="budy d-flex align-items-center flex-column">
+						<div class="gif"></div>
+						<p class="message">
+							Inward Details Created <br />
+							Successfully
+						</p>
+						<a href="./inward.html">
+							<button class="close-btn">Close</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -120,6 +311,13 @@
 		<!-- js -->
 		<script src="js/sidebar.js"></script>
 		<script src="js/header.js"></script>
-		<script src="js/create-new-inward.js"></script>
+		<script src="js/select-box.js"></script>
+		<script>
+			const savePopup = document.querySelector(
+				".new-inward-page > .new-inward-overlay"
+			)
+			const saveBtn = document.querySelector(".new-inward-page .save-btn")
+			saveBtn.onclick = () => (savePopup.style.display = "flex")
+		</script>
 	</body>
 </html>

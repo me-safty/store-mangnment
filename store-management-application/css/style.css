@@ -16,6 +16,11 @@
 	height: 0.3rem;
 	background-color: #5b5b5b2d;
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 .body {
 	flex: 1;
 }
@@ -143,6 +148,21 @@
 	font-size: 17px;
 	padding: 10px 130px;
 	margin-block: 35px;
+}
+.overlay .close-btn,
+.close-btn-success {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	color: var(--main-color);
+	border-bottom: 1px solid var(--main-color);
+	margin-bottom: 30px;
+}
+.overlay .message {
+	font-size: 20px;
+	font-weight: 500;
+	text-align: center;
+	margin-block: 30px;
 }
 /* end login page */
 /* start header */
@@ -517,7 +537,7 @@ tfoot td {
 	border: none;
 	border-radius: 5px;
 }
-.inward-page table {
+.warper table {
 	margin: 0;
 	border-radius: 0;
 	width: 100%;
@@ -525,16 +545,16 @@ tfoot td {
 	overflow-x: scroll;
 }
 .inward-page table .replace {
-	color: #0066FF;
+	color: #0066ff;
 }
-.inward-page .warper {
+.warper {
 	width: 100%;
 	overflow-x: scroll;
 }
-.inward-page table th {
+.warper table th {
 	padding-block: 20px;
 }
-.inward-page tbody {
+.warper table tbody {
 	height: fit-content;
 	overflow: hidden;
 }
@@ -622,6 +642,24 @@ tfoot td {
 	background: transparent;
 	color: var(--main-color);
 }
+.inward-page .inward-page-overlay .no-cancel {
+	font-size: 17px;
+	padding: 10px 35px;
+	margin-block: 35px;
+	color: var(--main-color);
+	border: 1px solid var(--main-color);
+}
+.inward-page .inward-page-overlay .delete-btn {
+	font-size: 17px;
+	padding: 10px 35px;
+	margin-block: 35px;
+	color: #fff;
+	background-color: var(--red);
+	border: 1px solid var(--red);
+}
+.inward-page .inward-page-overlay .message span {
+	color: var(--main-color);
+}
 /* end inward  */
 /* start create new inward */
 .new-inward h1 {
@@ -652,65 +690,67 @@ tfoot td {
 	margin: 0;
 }
 /* dropdown menu  */
-.dropdown {
-  color: #fff;
-  font-size: 15px;
-	width: 90%;	
-}
 .dropdown .select {
-  padding: 10px;
-  background-color: #fff;
+	color: #fff;
+	font-size: 15px;
+	width: 90%;
+	padding: 10px;
+	background-color: #fff;
 	color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: 0.3s;
-  border: 1px solid #7777773b;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: 0.3s;
+	border: 1px solid #7777773b;
 }
 
 .dropdown .caret {
-  border: 7px solid;
-  margin-top: 6px;
-  border-color: var(--main-color) transparent transparent transparent;
-  transition: 0.3s;
+	border: 7px solid;
+	margin-top: 6px;
+	border-color: var(--main-color) transparent transparent transparent;
+	transition: 0.3s;
 }
 .dropdown .drop {
-  transform: rotate(180deg);
-  margin: 0;
-  margin-bottom: 5px;
+	transform: rotate(180deg);
+	margin: 0;
+	margin-bottom: 5px;
 }
 .dropdown .menu {
-  list-style: none;
+	list-style: none;
 	color: #000;
-  margin: 0;
-  padding: 0;
-  padding: 7px;
-  background-color: #fff;
-  transition: 0.3s;
-  display: none;
-  opacity: 0;
-  border: 1px solid #fff;
+	margin: 0;
+	padding: 0;
+	padding: 7px;
+	background-color: #fff;
+	transition: 0.3s;
+	display: none;
+	opacity: 0;
+	border: 1px solid #fff;
 }
 .dropdown .menuActive {
-  opacity: 1;
-  display: block;
+	opacity: 1;
+	display: block;
+	position: absolute;
+	width: 100%;
+	background: #fff;
+	z-index: 1000;
+	border: 1px solid #7777774d;
 }
 .dropdown .menu li {
-  padding: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+	padding: 5px;
+	cursor: pointer;
+	transition: 0.3s;
 }
 .dropdown .menu li:not(:last-child) {
-  margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 .dropdown .menu li:hover {
-  background-color: #f0f0f0;
+	background-color: #f0f0f0;
 }
 .dropdown .menu li.selected {
-  background-color: #e7e7e7;
+	background-color: #e7e7e7;
 }
-
 .new-inward .invoice {
 	width: 50%;
 	height: 190px;
@@ -786,7 +826,6 @@ tfoot td {
 .new-inward .table-box {
 	margin-inline: 60px;
 }
-
 .new-inward .table-box > div:first-child {
 	text-align: end;
 }
@@ -798,6 +837,65 @@ tfoot td {
 	color: var(--main-color);
 	font-size: 21px;
 	border-radius: 4px;
-	margin-block: 20px 5px;
+	margin-block: 20px 10px;
+}
+.new-inward table {
+	min-width: fit-content;
+}
+.new-inward .table .select {
+	background-color: transparent;
+	width: 100%;
+	border-radius: 5px;
+	gap: 5px;
+}
+.new-inward .table .head {
+	background-color: var(--main-color);
+	color: #fff;
+	margin: 0;
+	padding: 7px 0;
+}
+.new-inward .table .row > div {
+	text-align: center;
+	padding: 0;
+}
+.new-inward .table .body .row > div:not(.col-3) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.new-inward .table .body .row {
+	margin: 0;
+	margin-bottom: 5px;
+	border: 1px solid #7777774d;
+	padding: 8px 0;
+}
+.new-inward .table input {
+	width: 50px;
+	height: 44px;
+	border: none;
+	outline: none;
+	padding: 12px;
+	border: 1px solid #7777774d;
+	border-radius: 5px;
+}
+.new-inward .table img {
+	transform: scale(1.3);
+	cursor: pointer;
+}
+.new-inward .save-btn {
+	text-align: end;
+}
+.new-inward .save-btn button {
+	padding: 13px 30px;
+	background-color: var(--main-color);
+	color: #fff;
+	margin-block: 40px;
+	border-radius: 5px;
+}
+.new-inward-overlay .message {
+	font-size: 20px;
+	font-weight: 500;
+	text-align: center;
+	margin-block: 30px;
 }
 /* end create new inward */
