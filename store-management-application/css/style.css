@@ -2,6 +2,8 @@
 :root {
 	--main-color: #274c77;
 	--secondary-color: #0c2f57;
+	--red: #ce0000;
+	--main-font-color: #525252;
 }
 /* root  */
 /* main */
@@ -289,8 +291,8 @@ header .close-sidebar-btn:hover {
 }
 #sidebar .popup a > button {
 	color: #fff;
-	background-color: #ce0000;
-	border: 1px solid #ce0000;
+	background-color: var(--red);
+	border: 1px solid var(--red);
 }
 /* end sidebar */
 /* start dashboard page */
@@ -339,7 +341,7 @@ th {
 tbody {
 	display: block;
 	height: 245px;
-	overflow-y: scroll;
+	overflow: scroll;
 	width: 100%;
 }
 tr {
@@ -468,11 +470,27 @@ tfoot td {
 }
 /* end dashboard page */
 /* start inward  */
-.inward-page .body div:nth-of-type(2) {
+.inward-page .body {
+	width: 70vw;
+}
+.inward-page .create-btn {
+	position: absolute;
+	right: 0;
+	top: -85px;
+	background: var(--main-color);
+	color: #fff;
+	border-radius: 5px;
+	font-size: 25px;
+	padding: 10px;
+	border: none;
+	overflow: none;
+}
+.inward-page .body > div:nth-of-type(2) {
 	margin-inline: 20px;
 }
 .inward-page h1 {
 	margin: 40px 20px;
+	color: var(--main-font-color);
 }
 .inward-page .search {
 	padding: 15px 10px 0;
@@ -503,11 +521,283 @@ tfoot td {
 	margin: 0;
 	border-radius: 0;
 	width: 100%;
+	min-width: 1100px;
+	overflow-x: scroll;
+}
+.inward-page table .replace {
+	color: #0066FF;
+}
+.inward-page .warper {
+	width: 100%;
+	overflow-x: scroll;
 }
 .inward-page table th {
 	padding-block: 20px;
 }
 .inward-page tbody {
 	height: fit-content;
+	overflow: hidden;
+}
+.inward-page table button {
+	border-radius: 5px;
+	background: transparent;
+	outline: none;
+	width: 65px;
+	padding: 4px 6px;
+	font-size: 12px;
+}
+.inward-page table .edit {
+	border: 1px solid var(--main-color);
+	color: var(--main-color);
+}
+.inward-page table .del {
+	border: 1px solid var(--red);
+	color: var(--red);
+}
+@media (max-width: 1400px) {
+	.inward-page thead th:first-child,
+	.inward-page tbody td:first-child {
+		min-width: 70px;
+		width: 70px;
+	}
+	.inward-page thead th:nth-of-type(2),
+	.inward-page tbody td:nth-of-type(2) {
+		min-width: 100px;
+		width: 100px;
+	}
+	.inward-page thead th:nth-of-type(3),
+	.inward-page tbody td:nth-of-type(3) {
+		min-width: 120px;
+		width: 120px;
+	}
+	.inward-page thead th:nth-of-type(4),
+	.inward-page tbody td:nth-of-type(4) {
+		min-width: 160px;
+		width: 160px;
+	}
+	.inward-page thead th:nth-of-type(5),
+	.inward-page tbody td:nth-of-type(5) {
+		min-width: 170px;
+		width: 170px;
+	}
+	.inward-page thead th:nth-of-type(6),
+	.inward-page tbody td:nth-of-type(6) {
+		min-width: 150px;
+		width: 150px;
+	}
+	.inward-page thead th:nth-of-type(7),
+	.inward-page tbody td:nth-of-type(7) {
+		min-width: 70px;
+		width: 70px;
+	}
+	.inward-page thead th:nth-of-type(8),
+	.inward-page tbody td:nth-of-type(8) {
+		min-width: 160px;
+		width: 160px;
+	}
+	.inward-page thead th:last-child,
+	.inward-page tbody td:last-child {
+		min-width: 70px;
+		width: 70px;
+	}
+}
+.inward-page .pages {
+	margin-block: 60px;
+}
+.inward-page .pages > div {
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.inward-page .pages > div.active {
+	background-color: var(--main-color);
+	color: #fff;
+}
+.inward-page .pages button {
+	border: 1px solid var(--main-color);
+	overflow: none;
+	border-radius: 8px;
+	padding: 10px;
+	background: transparent;
+	color: var(--main-color);
 }
 /* end inward  */
+/* start create new inward */
+.new-inward h1 {
+	color: var(--main-font-color);
+	margin: 30px 30px;
+}
+.new-inward h1 img {
+	width: 25px;
+}
+.new-inward .item {
+	margin-inline: 60px;
+}
+.new-inward .party-form {
+	width: 50%;
+	border: 1px solid #7777774d;
+	height: 190px;
+}
+.new-inward .party-form .head {
+	padding-inline: 30px;
+	background: var(--main-color);
+}
+.new-inward .party-form .body {
+	padding-inline: 30px;
+}
+.new-inward .party-form .head p {
+	color: #fff;
+	padding-block: 10px;
+	margin: 0;
+}
+/* dropdown menu  */
+.dropdown {
+  color: #fff;
+  font-size: 15px;
+	width: 90%;	
+}
+.dropdown .select {
+  padding: 10px;
+  background-color: #fff;
+	color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #7777773b;
+}
+
+.dropdown .caret {
+  border: 7px solid;
+  margin-top: 6px;
+  border-color: var(--main-color) transparent transparent transparent;
+  transition: 0.3s;
+}
+.dropdown .drop {
+  transform: rotate(180deg);
+  margin: 0;
+  margin-bottom: 5px;
+}
+.dropdown .menu {
+  list-style: none;
+	color: #000;
+  margin: 0;
+  padding: 0;
+  padding: 7px;
+  background-color: #fff;
+  transition: 0.3s;
+  display: none;
+  opacity: 0;
+  border: 1px solid #fff;
+}
+.dropdown .menuActive {
+  opacity: 1;
+  display: block;
+}
+.dropdown .menu li {
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dropdown .menu li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.dropdown .menu li:hover {
+  background-color: #f0f0f0;
+}
+.dropdown .menu li.selected {
+  background-color: #e7e7e7;
+}
+
+.new-inward .invoice {
+	width: 50%;
+	height: 190px;
+	border: 1px solid #7777774d;
+	border-left: none;
+}
+.new-inward .invoice .head {
+	color: #fff;
+	padding-block: 10px;
+	background-color: var(--main-color);
+}
+.new-inward .invoice p {
+	margin: 0;
+}
+.new-inward .invoice .data {
+	border: 1px solid #7777774d;
+	border-radius: 5px;
+	width: 150px;
+	margin: 15px 10px;
+	padding-right: 10px;
+}
+.new-inward .invoice .data input {
+	padding: 10px;
+	border: none;
+	outline: none;
+	background: #fff;
+	width: 80%;
+}
+.new-inward .invoice input.number {
+	align-self: flex-end;
+	border: 1px solid #7777774d;
+	border-radius: 5px;
+	padding: 10px;
+	width: 150px;
+	outline: none;
+	background: #fff;
+	margin: 15px 10px;
+}
+.new-inward .amount {
+	margin-top: 15px;
+}
+.new-inward .amount p {
+	margin: 0;
+	color: var(--main-color);
+	font-size: 20px;
+	font-weight: 600;
+}
+.new-inward .amount .rs {
+	border-radius: 8px;
+	overflow: hidden;
+	border: 1px solid #7777774d;
+}
+.new-inward .amount .rs button {
+	padding: 10px;
+	border: none;
+	color: #fff;
+	background-color: var(--main-color);
+}
+.new-inward .amount .rs input {
+	width: 130px;
+	border: none;
+	outline: none;
+	padding: 10px;
+}
+.new-inward .amount > input {
+	width: 40px;
+	border: none;
+	outline: none;
+	padding: 10px;
+	border: 1px solid #7777774d;
+	border-radius: 7px;
+}
+.new-inward .table-box {
+	margin-inline: 60px;
+}
+
+.new-inward .table-box > div:first-child {
+	text-align: end;
+}
+.new-inward .table-box > div:first-child button {
+	border: 1px dotted var(--main-color);
+	outline: none;
+	background: transparent;
+	padding: 7px 15px;
+	color: var(--main-color);
+	font-size: 21px;
+	border-radius: 4px;
+	margin-block: 20px 5px;
+}
+/* end create new inward */

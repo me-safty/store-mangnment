@@ -15,7 +15,10 @@
 			<div class="body flex-1">
 				<div id="header"></div>
 				<h1>Inward List</h1>
-				<div class="">
+				<div class="position-relative">
+					<a href="./create-new-inward.html">
+						<button class="create-btn">+ Create</button>
+					</a>
 					<div class="search">
 						<form action="" class="d-flex align-items-center gap-3">
 							<div class="input-box">
@@ -32,79 +35,144 @@
 							</button>
 						</form>
 					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>S.no</th>
-								<th>Date <img src="assets/inward/data.svg" alt="data"></th>
-								<th>Invoice No</th>
-								<th>Party Name</th>
-								<th>Material Details</th>
-								<th>Department </th>
-								<th>Qty</th>
-								<th>Bill Amount</th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>11/11/23</td>
-								<td>SSM100023</td>
-								<td>Lucky Paper Code</td>
-								<td>Timing Belt 5mm<br />Timing Belt 5mm<br />Timing Belt 5mm<br /><span>View more (2)</span></td>
-								<td>Spinning</td>
-								<td>234</td>
-								<td>10,234.85<br/><span>(Replace)</span></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>11/11/23</td>
-								<td>SSM100023</td>
-								<td>Lucky Paper Code</td>
-								<td>Timing Belt 5mm<br />Timing Belt 5mm<br />Timing Belt 5mm<br /><span>View more (2)</span></td>
-								<td>Spinning</td>
-								<td>234</td>
-								<td>10,234.85<br/></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>11/11/23</td>
-								<td>SSM100023</td>
-								<td>Lucky Paper Code</td>
-								<td>Timing Belt 5mm<br /></td>
-								<td>Spinning</td>
-								<td>234</td>
-								<td>10,234.85<br/><span>(Replace)</span></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>11/11/23</td>
-								<td>SSM100023</td>
-								<td>Lucky Paper Code</td>
-								<td>Timing Belt 5mm<br /></td>
-								<td>Spinning</td>
-								<td>234</td>
-								<td>10,234.85<br/></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>11/11/23</td>
-								<td>SSM100023</td>
-								<td>Lucky Paper Code</td>
-								<td>Timing Belt 5mm<br /></td>
-								<td>Spinning</td>
-								<td>234</td>
-								<td>10,234.85<br/></td>
-								<td></td>
-							</tr>
-
-						</tbody>
-					</table>
+					<div class="warper">
+						<table>
+							<thead>
+								<tr>
+									<th>S.no</th>
+									<th>Date <img src="assets/inward/data.svg" alt="data" /></th>
+									<th>Invoice No</th>
+									<th>Party Name</th>
+									<th>Material Details</th>
+									<th>Department</th>
+									<th>Qty</th>
+									<th>Bill Amount</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
+									<td>
+										Timing Belt 5mm<br />Timing Belt 5mm<br />Timing Belt 5mm<br /><span
+											>View more (2)</span
+										>
+									</td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85<br /><span class="replace">(Replace)</span></td>
+									<td>
+										<button class="edit d-flex align-items-center gap-2">
+											<img src="assets/inward/edit.svg" alt="edit" />Edit
+										</button>
+										<br />
+										<button class="del d-flex align-items-center gap-1">
+											<img src="assets/inward/del.svg" alt="Delete" />Delete
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
+									<td>
+										Timing Belt 5mm<br />Timing Belt 5mm<br />Timing Belt 5mm<br /><span
+											>View more (2)</span
+										>
+									</td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85<br /></td>
+									<td>
+										<button class="edit d-flex align-items-center gap-2">
+											<img src="assets/inward/edit.svg" alt="edit" />Edit
+										</button>
+										<br />
+										<button class="del d-flex align-items-center gap-1">
+											<img src="assets/inward/del.svg" alt="Delete" />Delete
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
+									<td>Timing Belt 5mm<br /></td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85<br /><span class="replace">(Replace)</span></td>
+									<td>
+										<button class="edit d-flex align-items-center gap-2">
+											<img src="assets/inward/edit.svg" alt="edit" />Edit
+										</button>
+										<br />
+										<button class="del d-flex align-items-center gap-1">
+											<img src="assets/inward/del.svg" alt="Delete" />Delete
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
+									<td>Timing Belt 5mm<br /></td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85<br /></td>
+									<td>
+										<button class="edit d-flex align-items-center gap-2">
+											<img src="assets/inward/edit.svg" alt="edit" />Edit
+										</button>
+										<br />
+										<button class="del d-flex align-items-center gap-1">
+											<img src="assets/inward/del.svg" alt="Delete" />Delete
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
+									<td>Timing Belt 5mm<br /></td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85<br /></td>
+									<td>
+										<button class="edit d-flex align-items-center gap-2">
+											<img src="assets/inward/edit.svg" alt="edit" />Edit
+										</button>
+										<br />
+										<button class="del d-flex align-items-center gap-1">
+											<img src="assets/inward/del.svg" alt="Delete" />Delete
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div
+						class="pages d-flex align-items-center justify-content-end gap-2"
+					>
+						<div
+							class="d-flex align-items-center justify-content-center one active"
+						>
+							1
+						</div>
+						<div class="d-flex align-items-center justify-content-center two">
+							2
+						</div>
+						<div class="d-flex align-items-center justify-content-center three">
+							3
+						</div>
+						<button>Next</button>
+					</div>
 				</div>
 			</div>
 		</main>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/normalize.css" />
+		<title>store management application</title>
+	</head>
+	<body>
+		<main class="new-inward-page d-flex">
+			<div id="sidebar"></div>
+			<div class="body flex-1">
+				<div id="header"></div>
+				<div class="new-inward">
+					<h1 class="d-flex align-items-center gap-1">
+						<img src="assets/inward/Arrow.svg" alt="arrow" /> Create New Inward
+					</h1>
+					<div class="item d-flex align-items-center justify-content-center">
+						<div class="party-form">
+							<div class="head">
+								<p>Party Form</p>
+							</div>
+							<div class="body">
+								<div class="dropdown">
+									<div class="select">
+										<span class="selected">Enter Company Name</span>
+										<div class="caret"></div>
+									</div>
+									<ul class="menu">
+										<li class="selected">MAJOR</li>
+										<li>MINOR</li>
+										<li>fef</li>
+										<li>effef</li>
+										<li>vergwr</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="invoice">
+							<div class="head d-flex justify-content-around">
+								<p>Invoice Date</p>
+								<p>Invoice Number</p>
+							</div>
+							<div class="body">
+								<div class="d-flex justify-content-around align-items-center">
+									<div
+										class="data d-flex align-items-center justify-content-between"
+									>
+										<input type="number" placeholder="23/11/2022" />
+										<img src="assets/inward/calender.svg" alt="calender" />
+									</div>
+									<input class="number" type="number" placeholder="128429692" />
+								</div>
+								<div
+									class="amount d-flex align-items-center gap-2 justify-content-center"
+								>
+									<p>Total Amount</p>
+									<div class="rs d-flex align-items-center">
+										<button>Rs</button>
+										<input type="number" />
+									</div>
+									<input type="number" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-box">
+						<div>
+							<button>+ Add Item</button>
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th>S.No</th>
+									<th>Material</th>
+									<th>Qty</th>
+									<th>Department</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Timing Belt 5mm<br /><span>View more (2)</span></td>
+									<td>R. Raja</td>
+									<td><img src="assets/inward/del.svg" alt="del" /></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Timing Belt 5mm<br /><span>View more (20)</span></td>
+									<td>R. Raja</td>
+									<td><img src="assets/inward/del.svg" alt="del" /></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Timing Belt 5mm<br /><span>View more (23)</span></td>
+									<td>R. Raja</td>
+									<td><img src="assets/inward/del.svg" alt="del" /></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Timing Belt 5mm<br /><span>View more (23)</span></td>
+									<td>R. Raja</td>
+									<td><img src="assets/inward/del.svg" alt="del" /></td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td>See All list</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- js -->
+		<script src="js/sidebar.js"></script>
+		<script src="js/header.js"></script>
+		<script src="js/create-new-inward.js"></script>
+	</body>
+</html>
