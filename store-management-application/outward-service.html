@@ -10,14 +10,415 @@
 		<title>store management application</title>
 	</head>
 	<body>
-		<main class="dashboard-page d-flex">
+		<main class="outward-service-page list-page d-flex">
 			<div id="sidebar"></div>
 			<div class="body flex-1">
 				<div id="header"></div>
+				<h1>Outward(Service) List</h1>
+				<div class="position-relative">
+					<div class="search">
+						<form action="" class="d-flex align-items-center gap-3">
+							<div class="input-box">
+								<img src="assets/inward/search.svg" alt="search" />
+								<input
+									type="text"
+									class="input-text"
+									placeholder="Search Party Name"
+								/>
+							</div>
+							<button role="search">
+								<img src="assets/inward/filter.svg" alt="filler" />
+							</button>
+						</form>
+					</div>
+					<div class="warper">
+						<table>
+							<thead>
+								<tr>
+									<th>S.no</th>
+									<th>Material Details</th>
+									<th>Department</th>
+									<th>Place</th>
+									<th>Material received<br />Date</th>
+									<th>Material Sending<br />Date</th>
+									<th>Approve By</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>
+										Timing Belt 5mm<br />Timing Belt 5mm<br />Timing Belt 5mm<br /><span
+											>View more (25)</span
+										>
+									</td>
+									<td>Spinning</td>
+									<td>Erode</td>
+									<td>11/11/2023</td>
+									<td>11/11/2023</td>
+									<td class="approve">
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											MD <button class="verified">Verified</button>
+										</div>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											ES <button class="pending">Pending</button>
+										</div>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											MS <button class="verified">Verified</button>
+										</div>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											AMS <button class="verified">Verified</button>
+										</div>
+									</td>
+									<td>
+										<button class="replaced-btn">Replaced</button>
+									</td>
+								</tr>
+
+								<tr>
+									<td>1</td>
+									<td>
+										Timing Belt 5mm<br />Timing Belt 5mm<br />Timing Belt 5mm<br /><span
+											>View more (25)</span
+										>
+									</td>
+									<td>Spinning</td>
+									<td>Erode</td>
+									<td>11/11/2320</td>
+									<td>11/11/2320</td>
+									<td class="approve">
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											MD <button class="verified">Verified</button>
+										</div>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											ES <button class="pending">Pending</button>
+										</div>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											MS <button class="verified">Verified</button>
+										</div>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											AMS <button class="verified">Verified</button>
+										</div>
+									</td>
+									<td>
+										<button class="replaced-btn">Replaced</button>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>
+										Timing Belt 5mm<br />Timing Belt 5mm<br />Timing Belt 5mm<br /><span
+											>View more (25)</span
+										>
+									</td>
+									<td>Spinning</td>
+									<td>Erode</td>
+									<td>11/11/2023</td>
+									<td>11/11/2023</td>
+									<td class="approve">
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											MD <button class="verified">Verified</button>
+										</div>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											ES <button class="pending">Pending</button>
+										</div>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											MS <button class="verified">Verified</button>
+										</div>
+										<div
+											class="d-flex justify-content-between align-items-center"
+										>
+											AMS <button class="verified">Verified</button>
+										</div>
+									</td>
+									<td>
+										<button class="replaced-btn">Waitng Approvel</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div
+						class="pages d-flex align-items-center justify-content-end gap-2"
+					>
+						<div
+							class="d-flex align-items-center justify-content-center one active"
+						>
+							1
+						</div>
+						<div class="d-flex align-items-center justify-content-center two">
+							2
+						</div>
+						<div class="d-flex align-items-center justify-content-center three">
+							3
+						</div>
+						<button>Next</button>
+					</div>
+				</div>
+			</div>
+			<!-- filter popup -->
+			<div
+				class="overlay overlay-filter position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+			>
+				<div class="popup">
+					<div class="head"></div>
+					<div class="body">
+						<div class="date">
+							<p>Date</p>
+							<div class="d-flex align-items-center gap-2">
+								<div class="d-flex input-date">
+									<p>Form Date</p>
+									<input type="date" />
+								</div>
+								<div class="d-flex input-date">
+									<p>To Date</p>
+									<input type="date" />
+								</div>
+							</div>
+						</div>
+						<div class="party-name">
+							<p>Party Name</p>
+							<div class="dropdown">
+								<div class="select">
+									<span></span>
+									<div class="caret"></div>
+								</div>
+								<ul class="menu">
+									<li>Lucky Paper Code</li>
+									<li>Lucky Paper Code</li>
+									<li>Lucky Paper Code</li>
+								</ul>
+							</div>
+						</div>
+						<div class="department">
+							<p>Department</p>
+							<div class="dropdown">
+								<div class="select">
+									<span></span>
+									<div class="caret"></div>
+								</div>
+								<ul class="menu">
+									<li>R. Raja</li>
+									<li>Spinning</li>
+									<li>R. Raja</li>
+								</ul>
+							</div>
+						</div>
+						<div
+							class="btns d-flex justify-content-center align-items-center gap-3"
+						>
+							<button class="w-50 cancel-filter">Cancel</button
+							><button class="w-50 apply-filter">Apply Filter</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- details popup -->
+			<div
+				class="overlay list-popup details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+			>
+				<div class="details-popup bg-white">
+					<div class="head d-flex justify-content-between align-items-center">
+						<h1>Outward(Service) List</h1>
+						<button class="close-btn">
+							<img src="assets/inward/close.svg" alt="close-button" />
+						</button>
+					</div>
+					<div
+						class="body m-auto d-flex align-items-center justify-content-center flex-column"
+					>
+						<div
+							class="inputs d-flex align-items-center justify-content-center gap-10"
+						>
+							<div class="input-box w-50">
+								<p>Party From</p>
+								<input type="text" placeholder="Lucky Paper Code" />
+							</div>
+							<div class="input-box w-50">
+								<p>Invoice Date</p>
+								<div
+									class="date d-flex align-items-center justify-content-between"
+								>
+									<input type="number" placeholder="23/11/2022" />
+									<img src="assets/inward/calender.svg" alt="calender" />
+								</div>
+							</div>
+						</div>
+						<div
+							class="inputs d-flex align-items-center justify-content-center gap-10"
+						>
+							<div class="input-box w-50">
+								<p>Material Sending Date</p>
+								<div
+									class="date d-flex align-items-center justify-content-between"
+								>
+									<input type="number" placeholder="23/11/2022" />
+									<img src="assets/inward/calender.svg" alt="calender" />
+								</div>
+							</div>
+							<div class="input-box w-50">
+								<p>Material Receiving Date <span>*</span></p>
+								<div
+									class="date d-flex align-items-center justify-content-between"
+								>
+									<input type="number" placeholder="23/11/2022" />
+									<img src="assets/inward/calender.svg" alt="calender" />
+								</div>
+							</div>
+						</div>
+						<div
+							class="inputs d-flex align-items-center justify-content-center gap-10"
+						>
+							<div class="input-box w-50">
+								<p>Invoice Number <span>*</span></p>
+								<input type="number" />
+							</div>
+							<div class="input-box w-50">
+								<p>Service Amount <span>*</span></p>
+								<div
+									class="amount d-flex align-items-center gap-2 justify-content-center"
+								>
+									<div class="rs d-flex align-items-center">
+										<button>Rs</button>
+										<input type="number" />
+									</div>
+									<input type="number" />
+								</div>
+							</div>
+						</div>
+						<div class="table w-100">
+							<div class="row head">
+								<div class="col-4">Material</div>
+								<div class="col-4">Qty</div>
+								<div class="col-4">Department</div>
+							</div>
+							<div class="body">
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">243</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">255</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">265</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">215</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">70</div>
+									<div class="col-4">Spinning</div>
+								</div>
+							</div>
+						</div>
+						<button class="back-to-list">Update & Continue</button>
+					</div>
+				</div>
+			</div>
+			<!-- update popup -->
+			<div
+				class="overlay update-popup new-inward-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+			>
+				<div class="popup bg-white">
+					<div
+						class="head d-flex gap-2 justify-content-center align-items-center"
+					>
+						<p>Outward(Service) Updated Successfully</p>
+						<img src="assets/login/tick.svg" alt="tick" />
+					</div>
+					<div class="budy d-flex align-items-center flex-column">
+						<div
+							class="gif position-relative d-flex align-items-center justify-content-around"
+						>
+							<img src="assets/gif/like-pop.gif" class="w-100" alt="success" />
+							<img src="assets/gif/true.gif" alt="success" />
+						</div>
+						<p class="message">
+							Outward(Service) Updated <br />
+							Successfully
+						</p>
+						<a href="./replacement.html">
+							<button class="close-btn">Close</button>
+						</a>
+					</div>
+				</div>
 			</div>
 		</main>
 		<!-- js -->
 		<script src="js/sidebar.js"></script>
 		<script src="js/header.js"></script>
+		<script src="js/select-box.js"></script>
+		<script>
+			const outwardServiceFilterPopup = document.querySelector(
+				".list-page .overlay-filter"
+			)
+			const outwardServiceFilterBtn = document.querySelector(
+				".list-page button[role=search]"
+			)
+			const outwardServiceCancelFilter = document.querySelector(
+				".list-page .overlay-filter .cancel-filter"
+			)
+			outwardServiceFilterBtn.onclick = (e) => {
+				e.preventDefault()
+				outwardServiceFilterPopup.style.display = "flex"
+			}
+			outwardServiceCancelFilter.onclick = () =>
+				(outwardServiceFilterPopup.style.display = "none")
+
+			const actionBtns = document.querySelectorAll(
+				".list-page table .replaced-btn"
+			)
+			const detailsPopup = document.querySelector(
+				".list-page .details-popup-overlay"
+			)
+			const closeDetailsPopup = document.querySelector(
+				".list-page .details-popup-overlay .close-btn"
+			)
+			actionBtns.forEach((btn) => {
+				btn.onclick = () => (detailsPopup.style.display = "flex")
+			})
+			closeDetailsPopup.onclick = () => (detailsPopup.style.display = "none")
+
+			const updatePopup = document.querySelector(".update-popup")
+			const backToListBtn = document.querySelector(
+				".details-popup .back-to-list"
+			)
+			backToListBtn.onclick = () => {
+				detailsPopup.style.display = "none"
+				updatePopup.style.display = "flex"
+			}
+		</script>
 	</body>
 </html>

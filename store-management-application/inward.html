@@ -10,7 +10,7 @@
 		<title>store management application</title>
 	</head>
 	<body>
-		<main class="inward-page d-flex">
+		<main class="inward-page list-page d-flex">
 			<div id="sidebar"></div>
 			<div class="body flex-1">
 				<div id="header"></div>
@@ -27,7 +27,6 @@
 									type="text"
 									class="input-text"
 									placeholder="Search Party Name"
-									required
 								/>
 							</div>
 							<button role="search">
@@ -65,9 +64,11 @@
 									<td>234</td>
 									<td>10,234.85<br /><span class="replace">(Replace)</span></td>
 									<td>
-										<button class="edit d-flex align-items-center gap-2">
-											<img src="assets/inward/edit.svg" alt="edit" />Edit
-										</button>
+										<a href="./inward-details.html">
+											<button class="edit d-flex align-items-center gap-2">
+												<img src="assets/inward/edit.svg" alt="edit" />Edit
+											</button>
+										</a>
 										<br />
 										<button class="del d-flex align-items-center gap-1">
 											<img src="assets/inward/del.svg" alt="Delete" />Delete
@@ -88,9 +89,11 @@
 									<td>234</td>
 									<td>10,234.85<br /></td>
 									<td>
-										<button class="edit d-flex align-items-center gap-2">
-											<img src="assets/inward/edit.svg" alt="edit" />Edit
-										</button>
+										<a href="./inward-details.html">
+											<button class="edit d-flex align-items-center gap-2">
+												<img src="assets/inward/edit.svg" alt="edit" />Edit
+											</button>
+										</a>
 										<br />
 										<button class="del d-flex align-items-center gap-1">
 											<img src="assets/inward/del.svg" alt="Delete" />Delete
@@ -107,9 +110,11 @@
 									<td>234</td>
 									<td>10,234.85<br /><span class="replace">(Replace)</span></td>
 									<td>
-										<button class="edit d-flex align-items-center gap-2">
-											<img src="assets/inward/edit.svg" alt="edit" />Edit
-										</button>
+										<a href="./inward-details.html">
+											<button class="edit d-flex align-items-center gap-2">
+												<img src="assets/inward/edit.svg" alt="edit" />Edit
+											</button>
+										</a>
 										<br />
 										<button class="del d-flex align-items-center gap-1">
 											<img src="assets/inward/del.svg" alt="Delete" />Delete
@@ -126,9 +131,11 @@
 									<td>234</td>
 									<td>10,234.85<br /></td>
 									<td>
-										<button class="edit d-flex align-items-center gap-2">
-											<img src="assets/inward/edit.svg" alt="edit" />Edit
-										</button>
+										<a href="./inward-details.html">
+											<button class="edit d-flex align-items-center gap-2">
+												<img src="assets/inward/edit.svg" alt="edit" />Edit
+											</button>
+										</a>
 										<br />
 										<button class="del d-flex align-items-center gap-1">
 											<img src="assets/inward/del.svg" alt="Delete" />Delete
@@ -145,9 +152,11 @@
 									<td>234</td>
 									<td>10,234.85<br /></td>
 									<td>
-										<button class="edit d-flex align-items-center gap-2">
-											<img src="assets/inward/edit.svg" alt="edit" />Edit
-										</button>
+										<a href="./inward-details.html">
+											<button class="edit d-flex align-items-center gap-2">
+												<img src="assets/inward/edit.svg" alt="edit" />Edit
+											</button>
+										</a>
 										<br />
 										<button class="del d-flex align-items-center gap-1">
 											<img src="assets/inward/del.svg" alt="Delete" />Delete
@@ -175,7 +184,64 @@
 					</div>
 				</div>
 			</div>
-			<!-- popup -->
+			<!-- filter popup -->
+			<div
+				class="overlay overlay-filter position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+			>
+				<div class="popup">
+					<div class="head"></div>
+					<div class="body">
+						<div class="date">
+							<p>Date</p>
+							<div class="d-flex align-items-center gap-2">
+								<div class="d-flex input-date">
+									<p>Form Date</p>
+									<input type="date" />
+								</div>
+								<div class="d-flex input-date">
+									<p>To Date</p>
+									<input type="date" />
+								</div>
+							</div>
+						</div>
+						<div class="party-name">
+							<p>Party Name</p>
+							<div class="dropdown">
+								<div class="select">
+									<span></span>
+									<div class="caret"></div>
+								</div>
+								<ul class="menu">
+									<li>Lucky Paper Code</li>
+									<li>Lucky Paper Code</li>
+									<li>Lucky Paper Code</li>
+								</ul>
+							</div>
+						</div>
+						<div class="department">
+							<p>Department</p>
+							<div class="dropdown">
+								<div class="select">
+									<span></span>
+									<div class="caret"></div>
+								</div>
+								<ul class="menu">
+									<li>Spinning</li>
+									<li>Spinning</li>
+									<li>Spinning</li>
+								</ul>
+							</div>
+						</div>
+						<div
+							class="btns d-flex justify-content-center align-items-center gap-3"
+						>
+							<button class="w-50 cancel-filter">Cancel</button
+							><button class="w-50 apply-filter">Apply Filter</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- delete popup -->
 			<div
 				class="overlay inward-page-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
 			>
@@ -187,7 +253,9 @@
 						<img src="assets/inward/red-alert.svg" alt="red-alert" />
 					</div>
 					<div class="d-flex align-items-center flex-column">
-						<div class="gif"></div>
+						<div class="gif d-flex align-items-center justify-content-around">
+							<img src="assets/gif/delete.gif" class="w-100" alt="success" />
+						</div>
 						<p class="message">
 							Are You sure you want to delete<br />Inward Details <br />
 							(<span>SSM100023</span>)
@@ -211,7 +279,12 @@
 						<img src="assets/login/tick.svg" alt="tick" />
 					</div>
 					<div class="budy d-flex align-items-center flex-column">
-						<div class="gif"></div>
+						<div
+							class="gif position-relative d-flex align-items-center justify-content-around"
+						>
+							<img src="assets/gif/like-pop.gif" class="w-100" alt="success" />
+							<img src="assets/gif/true.gif" alt="success" />
+						</div>
 						<p class="message">Inward Details Deleted<br />Successfully</p>
 						<button class="close-btn-success">Close</button>
 					</div>
@@ -221,35 +294,7 @@
 		<!-- js -->
 		<script src="js/sidebar.js"></script>
 		<script src="js/header.js"></script>
-		<script>
-			const deletePopup = document.querySelector(
-				".inward-page .inward-page-overlay"
-			)
-			const deleteInwardBtn = document.querySelectorAll(".inward-page .del")
-			const cancelDeleteBtn = document.querySelector(
-				".inward-page-overlay .no-cancel"
-			)
-			const yesDeleteBtn = document.querySelector(
-				".inward-page-overlay .delete-btn"
-			)
-			const deleteSuccessPopup = document.querySelector(
-				".new-inward-overlay-delete"
-			)
-			const closeBtnSuccess = document.querySelector(
-				".new-inward-overlay-delete .close-btn-success"
-			)
-			deleteInwardBtn.forEach((btn) => {
-				btn.onclick = () => {
-					deletePopup.style.display = "flex"
-				}
-			})
-			cancelDeleteBtn.onclick = () => (deletePopup.style.display = "none")
-			yesDeleteBtn.onclick = () => {
-				deletePopup.style.display = "none"
-				deleteSuccessPopup.style.display = "flex"
-			}
-			closeBtnSuccess.onclick = () =>
-				(deleteSuccessPopup.style.display = "none")
-		</script>
+		<script src="js/select-box.js"></script>
+		<script src="js/inward.js"></script>
 	</body>
 </html>

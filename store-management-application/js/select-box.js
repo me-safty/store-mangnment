@@ -1,6 +1,8 @@
 // dropdown menu functionality
 const allDropdowns = document.querySelectorAll(".dropdown")
 
+let selectedArr = []
+
 allDropdowns.forEach((dropdown) => {
 	const menu = dropdown.children[1]
 	const caret = dropdown.children[0].childNodes[3]
@@ -20,7 +22,7 @@ allDropdowns.forEach((dropdown) => {
 			e.classList.add("selected")
 			dropdownSelected.innerHTML = e.innerHTML
 			selected = e.innerHTML
-			changeVariation()
+			selectedArr.push(selected)
 		})
 	})
 })

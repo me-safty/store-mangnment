@@ -10,59 +10,48 @@
 		<title>store management application</title>
 	</head>
 	<body>
-		<main class="new-inward-page d-flex position-relative">
+		<main class="outward-details new-outward-page d-flex position-relative">
 			<div id="sidebar"></div>
 			<div class="body flex-1">
 				<div id="header"></div>
 				<div class="create-new">
 					<h1 class="d-flex align-items-center gap-1">
-						<img src="assets/inward/Arrow.svg" alt="arrow" /> Create New Inward
+						<img src="assets/inward/Arrow.svg" alt="arrow" /> Create New Outward
 					</h1>
 					<div class="item d-flex align-items-center justify-content-center">
 						<div class="party-form">
 							<div class="head">
-								<p>Party Form</p>
+								<p>Date</p>
 							</div>
-							<div class="body">
-								<div class="dropdown">
-									<div class="select">
-										<span class="selected">Enter Company Name</span>
-										<div class="caret"></div>
-									</div>
-									<ul class="menu">
-										<li class="selected">MAJOR</li>
-										<li>MINOR</li>
-										<li>fef</li>
-										<li>effef</li>
-										<li>vergwr</li>
-									</ul>
+							<div
+								class="body h-75 d-flex align-items-center justify-content-center"
+							>
+								<div
+									class="data d-flex align-items-center justify-content-between"
+								>
+									<input type="number" placeholder="23/11/2022" />
+									<img src="assets/inward/calender.svg" alt="calender" />
 								</div>
 							</div>
 						</div>
 						<div class="invoice">
-							<div class="head d-flex justify-content-around">
-								<p>Invoice Date</p>
-								<p>Invoice Number</p>
+							<div class="head d-flex">
+								<p>Who Take</p>
 							</div>
-							<div class="body">
-								<div class="d-flex justify-content-around align-items-center">
-									<div
-										class="data d-flex align-items-center justify-content-between"
-									>
-										<input type="number" placeholder="23/11/2022" />
-										<img src="assets/inward/calender.svg" alt="calender" />
+							<div
+								class="body d-flex align-items-center justify-content-around h-75"
+							>
+								<div class="dropdown w-75">
+									<div class="select">
+										<span class="selected">Raja</span>
+										<div class="caret"></div>
 									</div>
-									<input class="number" type="number" placeholder="128429692" />
-								</div>
-								<div
-									class="amount d-flex align-items-center gap-2 justify-content-center"
-								>
-									<p>Total Amount</p>
-									<div class="rs d-flex align-items-center">
-										<button>Rs</button>
-										<input type="number" />
-									</div>
-									<input type="number" />
+									<ul class="menu">
+										<li class="selected">Raja</li>
+										<li>Raja</li>
+										<li>Raja</li>
+										<li>Raja</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -278,21 +267,28 @@
 								</div>
 							</div>
 						</div>
-						<div class="save-btn">
-							<button>Save & Continue</button>
+						<div class="d-flex justify-content-end align-items-center gap-2">
+							<div class="update-make-outward-btn">
+								<a href="./outward-service.html">
+									<button>Update & Make Outward(service)</button>
+								</a>
+							</div>
+							<div class="update-btn">
+								<button>Update & Continue</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- popup -->
 			<div
-				class="overlay new-inward-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+				class="overlay new-outward-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
 			>
 				<div class="popup bg-white">
 					<div
 						class="head d-flex gap-2 justify-content-center align-items-center"
 					>
-						<p>New Inward Added Successfully</p>
+						<p>Outward(Inside) Updated Sucessfully</p>
 						<img src="assets/login/tick.svg" alt="tick" />
 					</div>
 					<div class="budy d-flex align-items-center flex-column">
@@ -300,13 +296,13 @@
 							class="gif position-relative d-flex align-items-center justify-content-around"
 						>
 							<img src="assets/gif/like-pop.gif" class="w-100" alt="success" />
-							<img src="assets/gif/file.gif" class="w-100" alt="success" />
+							<img src="assets/gif/true.gif" class="w-100" alt="success" />
 						</div>
 						<p class="message">
-							Inward Details Created <br />
+							Outward(Inside) Updated<br />
 							Successfully
 						</p>
-						<a href="./inward.html">
+						<a href="./outward-inside.html">
 							<button class="close-btn">Close</button>
 						</a>
 					</div>
@@ -319,25 +315,10 @@
 		<script src="js/select-box.js"></script>
 		<script>
 			const savePopup = document.querySelector(
-				".new-inward-page > .new-inward-overlay"
+				".new-outward-page > .new-outward-overlay"
 			)
-			const saveBtn = document.querySelector(".new-inward-page .save-btn")
+			const saveBtn = document.querySelector(".new-outward-page .update-btn button")
 			saveBtn.onclick = () => (savePopup.style.display = "flex")
-
-			const bins = document.querySelectorAll(".create-new img[alt='del']")
-			console.log(selectedArr)
-			const allSelectedBoxes = document.querySelectorAll(".table .dropdown")
-			// console.log(selectBoxesForBinNum, allSelectedBoxes.length , bins.length)
-			bins.forEach((bin, i) => {
-				console.log(bin)
-				const selectBoxesForBinNum = (allSelectedBoxes.length * (i + 1)) / bins.length
-				if (selectedArr.length === selectBoxesForBinNum) {
-					bins[(selectBoxesForBinNum / 3) - 1].style.filter = "grayscale(1)"
-				}
-				bins[selectBoxesForBinNum]
-				// get the selectedArr from js/selected-box.js
-				bin.onclick = () => console.log(selectedArr)
-			})
 		</script>
 	</body>
 </html>

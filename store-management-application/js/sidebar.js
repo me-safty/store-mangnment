@@ -332,7 +332,9 @@ sidebar.innerHTML = `
 			<p>Sure you want to Log Out?</p>
 		</div>
 		<div class="d-flex align-items-center flex-column">
-			<div class="gif"></div>
+			<div class="gif d-flex justify-content-center align-items-center">
+				<img src="assets/gif/log-out.gif" class="w-100" alt="success">
+			</div>
 			<div class="d-flex gap-3">
 				<button class="btn cancel">Cancel</button>
 				<a href="./index.html">
