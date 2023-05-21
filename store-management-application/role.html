@@ -391,6 +391,7 @@
 		<script src="js/sidebar.js"></script>
 		<script src="js/header.js"></script>
 		<script src="js/select-box.js"></script>
+		<script src="js/onChangeForCreateNewPages.js"></script>
 		<script>
 			// const deletePopup = document.querySelector(
 			// 	".list-page .outward-page-overlay"
@@ -486,6 +487,29 @@
 					enableBtns[i].classList.toggle("active")
 				}
 			})
+
+			// edit-popup
+			const editPopup2 = document.querySelector(".edit-popup")
+			const successfullyEditPopup = document.querySelector(".update-popup")
+			const selectBoxesEditPopup = document.querySelectorAll(
+				".edit-popup .dropdown"
+			)
+			const inputsDateEditPopup = document.querySelectorAll(".edit-popup input")
+			const selectBoxLisEditPopup = document.querySelectorAll(".edit-popup li")
+			const saveBtnEditPopup = document.querySelector(
+				".edit-popup .back-to-list"
+			)
+			onChangeForCreateNewPages(
+				saveBtnEditPopup,
+				selectBoxesEditPopup,
+				inputsDateEditPopup,
+				selectBoxLisEditPopup,
+				() => {
+					editPopup2.style.display = "none"
+					successfullyEditPopup.style.display = "flex"
+				},
+				() => undefined
+			)
 		</script>
 	</body>
 </html>

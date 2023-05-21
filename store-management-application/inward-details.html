@@ -265,7 +265,7 @@
 			</div>
 			<!-- popup -->
 			<div
-				class="overlay new-inward-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+				class="overlay save-overlay new-inward-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
 			>
 				<div class="popup bg-white">
 					<div
@@ -298,6 +298,20 @@
 		<script src="js/select-box.js"></script>
 		<script src="js/onChangeForCreateNewPages.js"></script>
 		<script src="js/onChangeForBin.js"></script>
+		<script>
+			const savePopup = document.querySelector(".save-overlay")
+			const saveBtn = document.querySelector(".save-btn")
+			const selectBoxes = document.querySelectorAll(".dropdown")
+			const inputsDate = document.querySelectorAll("input")
+			const selectBoxLis = document.querySelectorAll("li")
+
+			onChangeForCreateNewPages(
+				saveBtn,
+				selectBoxes,
+				inputsDate,
+				selectBoxLis,
+				() => (savePopup.style.display = "flex")
+			)
 		</script>
 	</body>
 </html>

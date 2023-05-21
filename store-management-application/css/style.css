@@ -1146,7 +1146,6 @@ tfoot td {
 .create-new .save-btn,
 .create-new .update-btn {
 	text-align: end;
-	opacity: .7;
 }
 .create-new .save-btn button,
 .create-new .update-btn button,

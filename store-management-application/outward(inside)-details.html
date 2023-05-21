@@ -26,19 +26,19 @@
 							<div
 								class="body h-75 d-flex align-items-center justify-content-center"
 							>
-							<div class="d-flex calender-box data">
-								<input
-									type="text"
-									id="custom-date"
-									placeholder="DD-MM-YYYY"
-									readonly
-								/>
-								<img
-									class="pe-1"
-									src="assets/inward/calender.svg"
-									alt="calender"
-								/>
-							</div>
+								<div class="d-flex calender-box data">
+									<input
+										type="text"
+										id="custom-date"
+										placeholder="DD-MM-YYYY"
+										readonly
+									/>
+									<img
+										class="pe-1"
+										src="assets/inward/calender.svg"
+										alt="calender"
+									/>
+								</div>
 							</div>
 						</div>
 						<div class="invoice">
@@ -275,8 +275,8 @@
 							</div>
 						</div>
 						<div class="d-flex justify-content-end align-items-center gap-2">
-							<div class="update-make-outward-btn save-btn">
-								<a href="./outward-service.html">
+							<div class="update-make-outward-btn">
+								<a>
 									<button>Update & Make Outward(service)</button>
 								</a>
 							</div>
@@ -289,7 +289,7 @@
 			</div>
 			<!-- popup -->
 			<div
-				class="overlay new-outward-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+				class="overlay save-overlay new-outward-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
 			>
 				<div class="popup bg-white">
 					<div
@@ -321,16 +321,34 @@
 		<script src="js/header.js"></script>
 		<script src="js/select-box.js"></script>
 		<script src="js/calender.js"></script>
-		<!-- <script src="js/onChangeForCreateNewPages.js"></script> -->
+		<script src="js/onChangeForCreateNewPages.js"></script>
 		<script src="js/onChangeForBin.js"></script>
 		<script>
-			const savePopup2 = document.querySelector(
+			const savePopup = document.querySelector(
 				".new-outward-page > .new-outward-overlay"
 			)
-			const saveBtn2 = document.querySelector(
-				".new-outward-page .update-btn button"
+			const saveBtn = document.querySelector(
+				".new-outward-page .save-btn button"
 			)
-			saveBtn2.onclick = () => (savePopup2.style.display = "flex")
+			const updateBtn = document.querySelector(".update-make-outward-btn")
+			const selectBoxes = document.querySelectorAll(".dropdown")
+			const inputsDate = document.querySelectorAll("input")
+			const selectBoxLis = document.querySelectorAll("li")
+			updateBtn.style.opacity = ".7"
+
+			onChangeForCreateNewPages(
+				saveBtn,
+				selectBoxes,
+				inputsDate,
+				selectBoxLis,
+				() => {
+					savePopup.style.display = "flex"
+				},
+				() => {
+					updateBtn.children[0].href = "./outward-service.html"
+					updateBtn.style.opacity = "1"
+				}
+			)
 		</script>
 	</body>
 </html>

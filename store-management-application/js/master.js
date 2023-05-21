@@ -1,7 +1,5 @@
 // delete popup
-const deletePopup = document.querySelector(
-	".list-page .outward-page-overlay"
-)
+const deletePopup = document.querySelector(".list-page .outward-page-overlay")
 const deleteInwardBtn = document.querySelectorAll(".list-page .del")
 const cancelDeleteBtn = document.querySelector(
 	".list-page .outward-page-overlay .no-cancel"
@@ -25,16 +23,13 @@ yesDeleteBtn.onclick = () => {
 	deletePopup.style.display = "none"
 	deleteSuccessPopup.style.display = "flex"
 }
-closeBtnSuccess.onclick = () =>
-	(deleteSuccessPopup.style.display = "none")
+closeBtnSuccess.onclick = () => (deleteSuccessPopup.style.display = "none")
 
 // edit popups
 const editPopup = document.querySelector(".edit-popup")
 const closeEditPopup = document.querySelector(".edit-popup .close-btn")
 const updatePopup = document.querySelector(".update-popup")
-const closeUpdatePopupBtn = document.querySelector(
-	".update-popup .close-btn"
-)
+const closeUpdatePopupBtn = document.querySelector(".update-popup .close-btn")
 const editBtns = document.querySelectorAll(".list-page table .edit")
 const updateBtn = document.querySelector(".edit-popup .back-to-list")
 closeEditPopup.onclick = () => (editPopup.style.display = "none")
@@ -49,9 +44,7 @@ closeUpdatePopupBtn.onclick = () => (updatePopup.style.display = "none")
 
 // create popup
 const createBtn = document.querySelector(".list-page .create-btn")
-const detailsPopup = document.querySelector(
-	".list-page .details-popup-overlay"
-)
+const detailsPopup = document.querySelector(".list-page .details-popup-overlay")
 const closeDetailsPopup = document.querySelector(
 	".list-page .details-popup-overlay .close-btn"
 )
@@ -62,9 +55,7 @@ const closeCreatedSuccessfullyPopupBtn = document.querySelector(
 	".created-successfully-popup .close-btn"
 )
 
-const backToListBtn = document.querySelector(
-	".details-popup .back-to-list"
-)
+const backToListBtn = document.querySelector(".details-popup .back-to-list")
 
 closeCreatedSuccessfullyPopupBtn.onclick = () =>
 	(createdSuccessfullyPopup.style.display = "none")
@@ -107,3 +98,50 @@ backToListBtn.onclick = () => {
 	detailsPopup.style.display = "none"
 	createdSuccessfullyPopup.style.display = "flex"
 }
+
+// create-master-popup
+const createMasterPopup = document.querySelector(".create-master-popup")
+const successfullyCreateMasterPopup = document.querySelector(
+	".created-successfully-popup"
+)
+const selectBoxesCreateMasterPopup = document.querySelectorAll(
+	".create-master-popup .dropdown"
+)
+const inputsDateCreateMasterPopup = document.querySelectorAll(
+	".create-master-popup input"
+)
+const selectBoxLisCreateMasterPopup = document.querySelectorAll(
+	".create-master-popup li"
+)
+const saveBtnCreateMasterPopup = document.querySelector(
+	".create-master-popup .back-to-list"
+)
+onChangeForCreateNewPages(
+	saveBtnCreateMasterPopup,
+	selectBoxesCreateMasterPopup,
+	inputsDateCreateMasterPopup,
+	selectBoxLisCreateMasterPopup,
+	() => {
+		createMasterPopup.style.display = "none"
+		successfullyCreateMasterPopup.style.display = "flex"
+	},
+	() => undefined
+)
+// edit-popup
+const editPopup2 = document.querySelector(".edit-popup")
+const successfullyEditPopup = document.querySelector(".update-popup")
+const selectBoxesEditPopup = document.querySelectorAll(".edit-popup .dropdown")
+const inputsDateEditPopup = document.querySelectorAll(".edit-popup input")
+const selectBoxLisEditPopup = document.querySelectorAll(".edit-popup li")
+const saveBtnEditPopup = document.querySelector(".edit-popup .back-to-list")
+onChangeForCreateNewPages(
+	saveBtnEditPopup,
+	selectBoxesEditPopup,
+	inputsDateEditPopup,
+	selectBoxLisEditPopup,
+	() => {
+		editPopup2.style.display = "none"
+		successfullyEditPopup.style.display = "flex"
+	},
+	() => undefined
+)
