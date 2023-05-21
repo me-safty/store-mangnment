@@ -95,6 +95,9 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #fff;
 	border-radius: 50%;
 }
+img[alt=del] {
+	filter: grayscale(1);
+}
 /* end custom calender  */
 /* container  */
 .container {

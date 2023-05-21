@@ -1,8 +1,8 @@
 const savePopup = document.querySelector(
-	".overlay"
+	".new-inward-page > .new-inward-overlay"
 )
 
-const saveBtn = document.querySelector(".save-btn")
+const saveBtn = document.querySelector(".new-inward-page .save-btn")
 const selectBoxes = document.querySelectorAll(".dropdown")
 const inputsDate = document.querySelectorAll("input")
 const selectBoxLis = document.querySelectorAll("li")

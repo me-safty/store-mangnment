@@ -336,6 +336,7 @@
 		<script src="js/select-box.js"></script>
 		<script src="js/calender.js"></script>
 		<script src="js/onChangeForCreateNewPages.js"></script>
+		<script src="js/onChangeForBin.js"></script>
 		<script>
 			const partyFormSelectBox = document.querySelector(".party-form .dropdown")
 			const partyFormSelectBoxLis = document.querySelectorAll(
@@ -347,21 +348,6 @@
 					partyFormSelectBox.style.display = "none"
 					partyFormPartyD.classList.add("active")
 				}
-			})
-
-
-
-			const bins = document.querySelectorAll(".create-new img[alt='del']")
-			const allSelectedBoxes = document.querySelectorAll(".table .dropdown")
-			bins.forEach((bin, i) => {
-				const selectBoxesForBinNum =
-					(allSelectedBoxes.length * (i + 1)) / bins.length
-				if (selectedArr.length === selectBoxesForBinNum) {
-					bins[selectBoxesForBinNum / 3 - 1].style.filter = "grayscale(1)"
-				}
-				bins[selectBoxesForBinNum]
-				// get the selectedArr from js/selected-box.js
-				// bin.onclick = () => console.log(selectedArr)
 			})
 		</script>
 	</body>
