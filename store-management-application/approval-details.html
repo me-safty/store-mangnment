@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/normalize.css" />
-		<title>store management application</title>
+		<title>Approval Details</title>
 	</head>
 	<body>
 		<main class="approval-details-page d-flex position-relative">
@@ -26,17 +26,15 @@
 							<div
 								class="body h-75 d-flex align-items-center justify-content-center"
 							>
-								<div class="dropdown w-75">
-									<div class="select">
-										<span>Select Employee Name</span>
-										<div class="caret"></div>
+								<div class="d-flex party-d justify-content-between w-100 mt-4">
+									<div class="d-flex flex-column align-items-start ">
+										<h2>Lucky Paper Code</h2>
+										<h3>Phn: 0424-265485</h3>
+										<h4>Coimbatore</h4>
 									</div>
-									<ul class="menu">
-										<li>Raja</li>
-										<li>Raja</li>
-										<li>Raja</li>
-										<li>Raja</li>
-									</ul>
+									<div class="change-party-btn">
+										<button>Change Party</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -47,12 +45,19 @@
 							<div
 								class="body d-flex align-items-center justify-content-around h-75"
 							>
-								<div
-									class="data d-flex align-items-center justify-content-between"
-								>
-									<input type="number" placeholder="23/11/2022" />
-									<img src="assets/inward/calender.svg" alt="calender" />
-								</div>
+							<div class="d-flex calender-box data">
+								<input
+									type="text"
+									id="custom-date"
+									placeholder="DD-MM-YYYY"
+									readonly
+								/>
+								<img
+									class="pe-1"
+									src="assets/inward/calender.svg"
+									alt="calender"
+								/>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -90,52 +95,7 @@
 												<div class="caret"></div>
 											</div>
 											<ul class="menu">
-												<li>kg</li>
-												<li>kg</li>
-												<li>kg</li>
-												<li>kg</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-4">
-										<div class="dropdown w-75">
-											<div class="select">
-												<span></span>
-												<div class="caret"></div>
-											</div>
-											<ul class="menu">
-												<li>Spinning</li>
-												<li>Spinning</li>
-												<li>Spinning</li>
-												<li>Spinning</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-4">
-										<div class="dropdown w-75">
-											<div class="select">
-												<span></span>
-												<div class="caret"></div>
-											</div>
-											<ul class="menu">
-												<li>Timing Belt 5mm</li>
-												<li>Timing Belt 5mm</li>
-												<li>Timing Belt 5mm</li>
-												<li>Timing Belt 5mm</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-4 d-flex gap-2 justify-content-center">
-										<input type="number" />
-										<div class="dropdown">
-											<div class="select">
-												<span>kg</span>
-												<div class="caret"></div>
-											</div>
-											<ul class="menu">
-												<li>kg</li>
+												<li class="selected">kg</li>
 												<li>kg</li>
 												<li>kg</li>
 												<li>kg</li>
@@ -180,7 +140,7 @@
 												<div class="caret"></div>
 											</div>
 											<ul class="menu">
-												<li>kg</li>
+												<li class="selected">kg</li>
 												<li>kg</li>
 												<li>kg</li>
 												<li>kg</li>
@@ -225,7 +185,52 @@
 												<div class="caret"></div>
 											</div>
 											<ul class="menu">
+												<li class="selected">kg</li>
 												<li>kg</li>
+												<li>kg</li>
+												<li>kg</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="dropdown w-75">
+											<div class="select">
+												<span></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li>Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-4">
+										<div class="dropdown w-75">
+											<div class="select">
+												<span></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-4 d-flex gap-2 justify-content-center">
+										<input type="number" />
+										<div class="dropdown">
+											<div class="select">
+												<span>kg</span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">kg</li>
 												<li>kg</li>
 												<li>kg</li>
 												<li>kg</li>
@@ -295,6 +300,7 @@
 		<script src="js/sidebar.js"></script>
 		<script src="js/header.js"></script>
 		<script src="js/select-box.js"></script>
+		<script src="js/calender.js"></script>
 		<script>
 			const savePopup = document.querySelector(
 				".approval-details-page > .new-outward-overlay"
@@ -302,7 +308,6 @@
 			const approveBtn = document.querySelector(
 				".approval-details-page .approve-btn button"
 			)
-			console.log(approveBtn)
 			approveBtn.onclick = () => (savePopup.style.display = "flex")
 		</script>
 	</body>

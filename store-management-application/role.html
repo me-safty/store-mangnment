@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/normalize.css" />
-		<title>store management application</title>
+		<title>Role</title>
 	</head>
 	<body>
 		<main class="role-page list-page d-flex">
@@ -198,7 +198,7 @@
 			</div>
 			<!-- create new popup -->
 			<div
-				class="overlay new-master-popup list-popup details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+				class="overlay edit-popup master-popup list-popup details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
 			>
 				<div class="details-popup bg-white">
 					<div class="head d-flex justify-content-between align-items-center">
@@ -208,30 +208,108 @@
 						</button>
 					</div>
 					<div class="body m-auto d-flex flex-column">
-						<div class="input-box w-100">
-							<p>Product Name <span>*</span></p>
-							<input type="text" placeholder="Lucky Paper Code" />
-						</div>
-						<div class="input-box w-50">
-							<p>Product Id <span>*</span></p>
-							<input type="text" placeholder="eg.smkms11" />
-						</div>
-						<div class="input-box w-50">
-							<p>Product Unit <span>*</span></p>
-							<div class="dropdown">
-								<div class="select">
-									<span>Kilogram</span>
-									<div class="caret"></div>
-								</div>
-								<ul class="menu">
-									<li>Kilogram</li>
-									<li>Kilogram</li>
-									<li>Kilogram</li>
-								</ul>
+						<div class="d-flex gap-5">
+							<div class="input-box p-0 w-50">
+								<p>Role Name <span>*</span></p>
+								<input type="text" placeholder="Spinning Master" />
+							</div>
+							<div class="input-box p-0 w-50">
+								<p>Department <span>*</span></p>
+								<input type="text" placeholder="Spinning" />
 							</div>
 						</div>
+						<div class="warper m-0 mt-4">
+							<table>
+								<thead>
+									<tr>
+										<th>Pages</th>
+										<th>Edit</th>
+										<th>View</th>
+										<th>Delete</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Inward</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+									</tr>
+									<tr>
+										<td>Outward</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+									</tr>
+									<tr>
+										<td>Return</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+									</tr>
+									<tr>
+										<td>Replacement</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+									</tr>
+									<tr>
+										<td>Master</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+										<td>
+											<span class="enable active">Enable</span>
+											<span class="disable">Disable</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
 						<div class="save-btn-box">
-							<button class="back-to-list">save</button>
+							<button class="back-to-list">Save & Update</button>
 						</div>
 					</div>
 				</div>
@@ -244,7 +322,7 @@
 					<div
 						class="head d-flex gap-2 justify-content-center align-items-center"
 					>
-						<p>Outward(Service) Updated Successfully</p>
+						<p>Role Updated Successfully</p>
 						<img src="assets/login/tick.svg" alt="tick" />
 					</div>
 					<div class="budy d-flex align-items-center flex-column">
@@ -254,13 +332,8 @@
 							<img src="assets/gif/like-pop.gif" class="w-100" alt="success" />
 							<img src="assets/gif/true.gif" alt="success" />
 						</div>
-						<p class="message">
-							Outward(Service) Updated <br />
-							Successfully
-						</p>
-						<a href="./replacement.html">
-							<button class="close-btn">Close</button>
-						</a>
+						<p class="message">Role Updated Successfully</p>
+						<button class="close-btn">Close</button>
 					</div>
 				</div>
 			</div>
@@ -280,7 +353,7 @@
 							<img src="assets/gif/delete.gif" class="w-100" alt="success" />
 						</div>
 						<p class="message">
-							Are You sure you want to delete<br />Inward Details <br />
+							Are You sure you want to delete<br />Role Details <br />
 							(<span>SSM100023</span>)
 						</p>
 						<div class="d-flex gap-5">
@@ -298,7 +371,7 @@
 					<div
 						class="head d-flex gap-2 justify-content-center align-items-center"
 					>
-						<p>Inward Details Deleted Successfully</p>
+						<p>Role Details Deleted Successfully</p>
 						<img src="assets/login/tick.svg" alt="tick" />
 					</div>
 					<div class="budy d-flex align-items-center flex-column">
@@ -308,7 +381,7 @@
 							<img src="assets/gif/like-pop.gif" class="w-100" alt="success" />
 							<img src="assets/gif/true.gif" alt="success" />
 						</div>
-						<p class="message">Inward Details Deleted<br />Successfully</p>
+						<p class="message">Role Details Deleted<br />Successfully</p>
 						<button class="close-btn-success">Close</button>
 					</div>
 				</div>
@@ -319,59 +392,100 @@
 		<script src="js/header.js"></script>
 		<script src="js/select-box.js"></script>
 		<script>
-			const deletePopup = document.querySelector(
-				".list-page .outward-page-overlay"
-			)
-			const deleteInwardBtn = document.querySelectorAll(".list-page .del")
-			const cancelDeleteBtn = document.querySelector(
-				".list-page .outward-page-overlay .no-cancel"
-			)
-			const yesDeleteBtn = document.querySelector(
-				".list-page .outward-page-overlay .delete-btn"
-			)
-			const deleteSuccessPopup = document.querySelector(
-				".list-page .new-inward-overlay-delete"
-			)
-			const closeBtnSuccess = document.querySelector(
-				".list-page .new-inward-overlay-delete .close-btn-success"
-			)
-			deleteInwardBtn.forEach((btn) => {
-				btn.onclick = () => {
-					deletePopup.style.display = "flex"
-				}
-			})
-			cancelDeleteBtn.onclick = () => (deletePopup.style.display = "none")
-			yesDeleteBtn.onclick = () => {
-				deletePopup.style.display = "none"
-				deleteSuccessPopup.style.display = "flex"
-			}
-			closeBtnSuccess.onclick = () =>
-				(deleteSuccessPopup.style.display = "none")
+			// const deletePopup = document.querySelector(
+			// 	".list-page .outward-page-overlay"
+			// )
+			// const deleteInwardBtn = document.querySelectorAll(".list-page .del")
+			// const cancelDeleteBtn = document.querySelector(
+			// 	".list-page .outward-page-overlay .no-cancel"
+			// )
+			// const yesDeleteBtn = document.querySelector(
+			// 	".list-page .outward-page-overlay .delete-btn"
+			// )
+			// const deleteSuccessPopup = document.querySelector(
+			// 	".list-page .new-inward-overlay-delete"
+			// )
+			// const closeBtnSuccess = document.querySelector(
+			// 	".list-page .new-inward-overlay-delete .close-btn-success"
+			// )
+			// deleteInwardBtn.forEach((btn) => {
+			// 	btn.onclick = () => {
+			// 		deletePopup.style.display = "flex"
+			// 	}
+			// })
+			// cancelDeleteBtn.onclick = () => (deletePopup.style.display = "none")
+			// yesDeleteBtn.onclick = () => {
+			// 	deletePopup.style.display = "none"
+			// 	deleteSuccessPopup.style.display = "flex"
+			// }
+			// closeBtnSuccess.onclick = () =>
+			// 	(deleteSuccessPopup.style.display = "none")
 
-			const actionBtns = document.querySelectorAll(
-				".list-page table .replaced-btn"
-			)
-			const createBtn = document.querySelector(".list-page .create-btn")
-			const detailsPopup = document.querySelector(
-				".list-page .details-popup-overlay"
-			)
-			const closeDetailsPopup = document.querySelector(
-				".list-page .details-popup-overlay .close-btn"
-			)
-			actionBtns.forEach((btn) => {
-				btn.onclick = () => (detailsPopup.style.display = "flex")
-			})
-			createBtn.onclick = () => (detailsPopup.style.display = "flex")
-			closeDetailsPopup.onclick = () => (detailsPopup.style.display = "none")
+			// const actionBtns = document.querySelectorAll(
+			// 	".list-page table .replaced-btn"
+			// )
+			// const createBtn = document.querySelector(".list-page .create-btn")
+			// // const detailsPopup = document.querySelector(
+			// // 	".list-page .details-popup-overlay"
+			// // )
+			// const closeDetailsPopup = document.querySelector(
+			// 	".list-page .details-popup-overlay .close-btn"
+			// )
+			// actionBtns.forEach((btn) => {
+			// 	btn.onclick = () => (detailsPopup.style.display = "flex")
+			// })
+			// createBtn.onclick = () => (detailsPopup.style.display = "flex")
+			// closeDetailsPopup.onclick = () => (detailsPopup.style.display = "none")
 
+			// // const updatePopup = document.querySelector(".update-popup")
+			// const backToListBtn = document.querySelector(
+			// 	".details-popup .back-to-list"
+			// )
+			// backToListBtn.onclick = () => {
+			// 	detailsPopup.style.display = "none"
+			// 	updatePopup.style.display = "flex"
+			// }
+
+			// edit popups
+			const editPopup = document.querySelector(".edit-popup")
+			const closeEditPopup = document.querySelector(".edit-popup .close-btn")
 			const updatePopup = document.querySelector(".update-popup")
-			const backToListBtn = document.querySelector(
-				".details-popup .back-to-list"
+			const closeUpdatePopupBtn = document.querySelector(
+				".update-popup .close-btn"
 			)
-			backToListBtn.onclick = () => {
-				detailsPopup.style.display = "none"
+			const editBtns = document.querySelectorAll(".list-page table .edit")
+			const updateBtn = document.querySelector(".edit-popup .back-to-list")
+			closeEditPopup.onclick = () => (editPopup.style.display = "none")
+			editBtns.forEach((btn) => {
+				btn.onclick = () => (editPopup.style.display = "flex")
+			})
+			updateBtn.onclick = () => {
+				editPopup.style.display = "none"
 				updatePopup.style.display = "flex"
 			}
+			closeUpdatePopupBtn.onclick = () => (updatePopup.style.display = "none")
+
+			// edit popup table btns
+			const tableBtns = document.querySelectorAll(".edit-popup td > span")
+			const enableBtns = document.querySelectorAll(
+				".edit-popup td > span.enable"
+			)
+			const disableBtns = document.querySelectorAll(
+				".edit-popup td > span.disable"
+			)
+
+			enableBtns.forEach((btn, i) => {
+				btn.onclick = () => {
+					btn.classList.toggle("active")
+					disableBtns[i].classList.toggle("active")
+				}
+			})
+			disableBtns.forEach((btn, i) => {
+				btn.onclick = () => {
+					btn.classList.toggle("active")
+					enableBtns[i].classList.toggle("active")
+				}
+			})
 		</script>
 	</body>
 </html>

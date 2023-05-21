@@ -7,10 +7,10 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/normalize.css" />
-		<title>store management application</title>
+		<title>Create New Outward(Inside)</title>
 	</head>
 	<body>
-		<main class="outward-details new-outward-page d-flex position-relative">
+		<main class="new-outward-page d-flex position-relative">
 			<div id="sidebar"></div>
 			<div class="body flex-1">
 				<div id="header"></div>
@@ -26,12 +26,19 @@
 							<div
 								class="body h-75 d-flex align-items-center justify-content-center"
 							>
-								<div
-									class="data d-flex align-items-center justify-content-between"
-								>
-									<input type="number" placeholder="23/11/2022" />
-									<img src="assets/inward/calender.svg" alt="calender" />
-								</div>
+							<div class="d-flex calender-box data m-0">
+								<input
+									type="text"
+									id="custom-date"
+									placeholder="DD-MM-YYYY"
+									readonly
+								/>
+								<img
+									class="pe-1"
+									src="assets/inward/calender.svg"
+									alt="calender"
+								/>
+							</div>
 							</div>
 						</div>
 						<div class="invoice">
@@ -43,7 +50,7 @@
 							>
 								<div class="dropdown w-75">
 									<div class="select">
-										<span>Raja</span>
+										<span>Select Employee Name</span>
 										<div class="caret"></div>
 									</div>
 									<ul class="menu">
@@ -93,56 +100,7 @@
 												<div class="caret"></div>
 											</div>
 											<ul class="menu">
-												<li>kg</li>
-												<li>kg</li>
-												<li>kg</li>
-												<li>kg</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-3">
-										<div class="dropdown">
-											<div class="select">
-												<span></span>
-												<div class="caret"></div>
-											</div>
-											<ul class="menu">
-												<li>Spinning</li>
-												<li>Spinning</li>
-												<li>Spinning</li>
-												<li>Spinning</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-2">
-										<img src="assets/inward/del.svg" alt="del" />
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-1">1</div>
-									<div class="col-3">
-										<div class="dropdown">
-											<div class="select">
-												<span></span>
-												<div class="caret"></div>
-											</div>
-											<ul class="menu">
-												<li>Timing Belt 5mm</li>
-												<li>Timing Belt 5mm</li>
-												<li>Timing Belt 5mm</li>
-												<li>Timing Belt 5mm</li>
-											</ul>
-										</div>
-									</div>
-									<div class="col-3 d-flex gap-2 justify-content-center">
-										<input type="number" />
-										<div class="dropdown">
-											<div class="select">
-												<span>kg</span>
-												<div class="caret"></div>
-											</div>
-											<ul class="menu">
-												<li>kg</li>
+												<li class="selected">kg</li>
 												<li>kg</li>
 												<li>kg</li>
 												<li>kg</li>
@@ -191,7 +149,7 @@
 												<div class="caret"></div>
 											</div>
 											<ul class="menu">
-												<li>kg</li>
+												<li class="selected">kg</li>
 												<li>kg</li>
 												<li>kg</li>
 												<li>kg</li>
@@ -240,7 +198,56 @@
 												<div class="caret"></div>
 											</div>
 											<ul class="menu">
+												<li class="selected">kg</li>
 												<li>kg</li>
+												<li>kg</li>
+												<li>kg</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-3">
+										<div class="dropdown">
+											<div class="select">
+												<span></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li>Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+												<li>Spinning</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-2">
+										<img src="assets/inward/del.svg" alt="del" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-1">1</div>
+									<div class="col-3">
+										<div class="dropdown">
+											<div class="select">
+												<span></span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+												<li>Timing Belt 5mm</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-3 d-flex gap-2 justify-content-center">
+										<input type="number" />
+										<div class="dropdown">
+											<div class="select">
+												<span>kg</span>
+												<div class="caret"></div>
+											</div>
+											<ul class="menu">
+												<li class="selected">kg</li>
 												<li>kg</li>
 												<li>kg</li>
 												<li>kg</li>
@@ -267,15 +274,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="d-flex justify-content-end align-items-center gap-2">
-							<div class="update-make-outward-btn">
-								<a href="./outward-service.html">
-									<button>Update & Make Outward(service)</button>
-								</a>
-							</div>
-							<div class="update-btn">
-								<button>Update & Continue</button>
-							</div>
+						<div class="save-btn">
+							<button>Save & Continue</button>
 						</div>
 					</div>
 				</div>
@@ -288,7 +288,7 @@
 					<div
 						class="head d-flex gap-2 justify-content-center align-items-center"
 					>
-						<p>Outward(Inside) Updated Sucessfully</p>
+						<p>New Outward Added Successfully</p>
 						<img src="assets/login/tick.svg" alt="tick" />
 					</div>
 					<div class="budy d-flex align-items-center flex-column">
@@ -299,10 +299,10 @@
 							<img src="assets/gif/true.gif" class="w-100" alt="success" />
 						</div>
 						<p class="message">
-							Outward(Inside) Updated<br />
+							Outward(Inside) Details Created<br />
 							Successfully
 						</p>
-						<a href="./outward-inside.html">
+						<a href="./outward(inside).html">
 							<button class="close-btn">Close</button>
 						</a>
 					</div>
@@ -313,14 +313,16 @@
 		<script src="js/sidebar.js"></script>
 		<script src="js/header.js"></script>
 		<script src="js/select-box.js"></script>
+		<script src="js/calender.js"></script>
+		<script src="js/onChangeForCreateNewPages.js"></script>
 		<script>
-			const savePopup = document.querySelector(
+			const savePopup2 = document.querySelector(
 				".new-outward-page > .new-outward-overlay"
 			)
-			const saveBtn = document.querySelector(
-				".new-outward-page .update-btn button"
+			const saveBtn2 = document.querySelector(
+				".new-outward-page .save-btn button"
 			)
-			saveBtn.onclick = () => (savePopup.style.display = "flex")
+			saveBtn2.onclick = () => (savePopup2.style.display = "flex")
 		</script>
 	</body>
 </html>

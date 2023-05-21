@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/normalize.css" />
-		<title>store management application</title>
+		<title>Reports</title>
 	</head>
 	<body>
 		<main class="reports-page list-page d-flex">
@@ -19,20 +19,34 @@
 					<div class="form-date d-flex align-items-center gap-4">
 						<div class="input-box">
 							<p>Form Date</p>
-							<div
-								class="data d-flex align-items-center justify-content-between"
-							>
-								<input type="number" placeholder="23/11/2022" />
-								<img src="assets/inward/calender.svg" alt="calender" />
+							<div class="d-flex calender-box data p-0">
+								<input
+									type="text"
+									id="custom-date"
+									placeholder="DD-MM-YYYY"
+									readonly
+								/>
+								<img
+									class="pe-1"
+									src="assets/inward/calender.svg"
+									alt="calender"
+								/>
 							</div>
 						</div>
 						<div class="input-box">
 							<p>Form Date</p>
-							<div
-								class="data d-flex align-items-center justify-content-between"
-							>
-								<input type="number" placeholder="23/11/2022" />
-								<img src="assets/inward/calender.svg" alt="calender" />
+							<div class="d-flex calender-box data p-0">
+								<input
+									type="text"
+									id="custom-date"
+									placeholder="DD-MM-YYYY"
+									readonly
+								/>
+								<img
+									class="pe-1"
+									src="assets/inward/calender.svg"
+									alt="calender"
+								/>
 							</div>
 						</div>
 					</div>
@@ -129,6 +143,16 @@
 									<td>11/11/23</td>
 									<td>SSM100023</td>
 									<td>Lucky Paper Code</td>
+									<td>Timing Belt 5mm</td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85<br /></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
 									<td>Timing Belt 5mm<br /></td>
 									<td>Spinning</td>
 									<td>234</td>
@@ -167,6 +191,7 @@
 		<script src="js/sidebar.js"></script>
 		<script src="js/header.js"></script>
 		<script src="js/select-box.js"></script>
+		<script src="js/calender.js"></script>
 		<script>
 			const selectBoxes = document.querySelectorAll(".dropdown")
 			const inputsDate = document.querySelectorAll(".data input")

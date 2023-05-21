@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/normalize.css" />
-		<title>store management application</title>
+		<title>Replacement List</title>
 	</head>
 	<body>
 		<main class="replacement-page list-page d-flex">
@@ -141,11 +141,35 @@
 							<div class="d-flex align-items-center gap-2">
 								<div class="d-flex input-date">
 									<p>Form Date</p>
-									<input type="date" />
+									<div class="d-flex">
+										<input
+											type="text"
+											id="custom-date"
+											placeholder="DD-MM-YYYY"
+											readonly
+										/>
+										<img
+											class="pe-1"
+											src="assets/inward/calender.svg"
+											alt="calender"
+										/>
+									</div>
 								</div>
 								<div class="d-flex input-date">
 									<p>To Date</p>
-									<input type="date" />
+									<div class="d-flex">
+										<input
+											type="text"
+											id="custom-date"
+											placeholder="DD-MM-YYYY"
+											readonly
+										/>
+										<img
+											class="pe-1"
+											src="assets/inward/calender.svg"
+											alt="calender"
+										/>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -191,6 +215,8 @@
 		<script src="js/sidebar.js"></script>
 		<script src="js/header.js"></script>
 		<script src="js/select-box.js"></script>
+		<script src="js/calender.js"></script>
+
 		<script>
 			const outwardServiceFilterPopup = document.querySelector(
 				".list-page .overlay-filter"

@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/normalize.css" />
-		<title>store management application</title>
+		<title>Outward(Inside) List</title>
 	</head>
 	<body>
 		<main class="outward-inside-page list-page d-flex">
@@ -16,7 +16,7 @@
 				<div id="header"></div>
 				<h1>Outward(Inside) List</h1>
 				<div class="position-relative">
-					<a href="./create-new-outward.html">
+					<a href="./create-new-outward(inside).html">
 						<button class="create-btn">+ Create</button>
 					</a>
 					<div class="search">
@@ -60,7 +60,7 @@
 									<td>Spinning</td>
 									<td>234</td>
 									<td>
-										<a href="./outward-details.html">
+										<a href="./outward(inside)-details.html">
 											<button class="edit d-flex align-items-center gap-2">
 												<img src="assets/inward/edit.svg" alt="edit" />Edit
 											</button>
@@ -83,7 +83,7 @@
 									<td>Spinning</td>
 									<td>234</td>
 									<td>
-										<a href="./outward-details.html">
+										<a href="./outward(inside)-details.html">
 											<button class="edit d-flex align-items-center gap-2">
 												<img src="assets/inward/edit.svg" alt="edit" />Edit
 											</button>
@@ -102,7 +102,7 @@
 									<td>Spinning</td>
 									<td>234</td>
 									<td>
-										<a href="./outward-details.html">
+										<a href="./outward(inside)-details.html">
 											<button class="edit d-flex align-items-center gap-2">
 												<img src="assets/inward/edit.svg" alt="edit" />Edit
 											</button>
@@ -121,7 +121,7 @@
 									<td>Spinning</td>
 									<td>234</td>
 									<td>
-										<a href="./outward-details.html">
+										<a href="./outward(inside)-details.html">
 											<button class="edit d-flex align-items-center gap-2">
 												<img src="assets/inward/edit.svg" alt="edit" />Edit
 											</button>
@@ -140,7 +140,7 @@
 									<td>Spinning</td>
 									<td>234</td>
 									<td>
-										<a href="./outward-details.html">
+										<a href="./outward(inside)-details.html">
 											<button class="edit d-flex align-items-center gap-2">
 												<img src="assets/inward/edit.svg" alt="edit" />Edit
 											</button>
@@ -184,11 +184,35 @@
 							<div class="d-flex align-items-center gap-2">
 								<div class="d-flex input-date">
 									<p>Form Date</p>
-									<input type="date" />
+									<div class="d-flex">
+										<input
+											type="text"
+											id="custom-date"
+											placeholder="DD-MM-YYYY"
+											readonly
+										/>
+										<img
+											class="pe-1"
+											src="assets/inward/calender.svg"
+											alt="calender"
+										/>
+									</div>
 								</div>
 								<div class="d-flex input-date">
 									<p>To Date</p>
-									<input type="date" />
+									<div class="d-flex">
+										<input
+											type="text"
+											id="custom-date"
+											placeholder="DD-MM-YYYY"
+											readonly
+										/>
+										<img
+											class="pe-1"
+											src="assets/inward/calender.svg"
+											alt="calender"
+										/>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -235,7 +259,7 @@
 			>
 				<div class="details-popup bg-white">
 					<div class="head d-flex justify-content-between align-items-center">
-						<h1>Inward Details</h1>
+						<h1>Outward(Inside) Details</h1>
 						<button class="close-btn">
 							<img src="assets/inward/close.svg" alt="close-button" />
 						</button>
@@ -248,11 +272,19 @@
 						>
 							<div class="input-box w-50">
 								<p>Date</p>
-								<div
-									class="date d-flex align-items-center justify-content-between"
-								>
-									<input type="number" placeholder="23/11/2022" />
-									<img src="assets/inward/calender.svg" alt="calender" />
+								<div class="d-flex justify-content-between calender-box data m-0 w-100">
+									<input
+										type="text"
+										id="custom-date"
+										placeholder="DD-MM-YYYY"
+										readonly
+										class="w-100"
+									/>
+									<img
+										class="pe-1"
+										src="assets/inward/calender.svg"
+										alt="calender"
+									/>
 								</div>
 							</div>
 							<div class="who-took input-box w-50">
@@ -372,7 +404,7 @@
 							<img src="assets/gif/delete.gif" class="w-100" alt="success" />
 						</div>
 						<p class="message">
-							Are You sure you want to delete<br />Inward Details <br />
+							Are You sure you want to delete<br />Outward(Service) Details <br />
 							(<span>SSM100023</span>)
 						</p>
 						<div class="d-flex gap-5">
@@ -390,7 +422,7 @@
 					<div
 						class="head d-flex gap-2 justify-content-center align-items-center"
 					>
-						<p>Inward Details Deleted Successfully</p>
+						<p>Outward(Service) Deleted Successfully</p>
 						<img src="assets/login/tick.svg" alt="tick" />
 					</div>
 					<div class="budy d-flex align-items-center flex-column">
@@ -400,7 +432,7 @@
 							<img src="assets/gif/like-pop.gif" class="w-100" alt="success" />
 							<img src="assets/gif/true.gif" alt="success" />
 						</div>
-						<p class="message">Inward Details Deleted<br />Successfully</p>
+						<p class="message">Outward(Service) Details Deleted<br />Successfully</p>
 						<button class="close-btn-success">Close</button>
 					</div>
 				</div>
@@ -411,5 +443,7 @@
 		<script src="js/header.js"></script>
 		<script src="js/outward.js"></script>
 		<script src="js/select-box.js"></script>
+		<script src="js/calender.js"></script>
+
 	</body>
 </html>

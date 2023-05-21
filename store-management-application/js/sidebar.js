@@ -122,7 +122,7 @@ sidebar.innerHTML = `
 	<li>
 		<a
 			class="d-flex align-items-center gap-2"
-			href="./outward-inside.html"
+			href="./outward(inside).html"
 		>
 			<svg
 				width="20"
@@ -375,8 +375,9 @@ lis.forEach((li) => {
 				}
 			}
 		})
-	} else if (pagePath === pathname) {
+	} else if (pathname === pagePath) {
+		li.classList.add("active")
+	} else if (pathname?.split(/[-.]/).includes(pagePath?.split(/[-.]/)[0])) {
 		li.classList.add("active")
 	}
 })
- 
