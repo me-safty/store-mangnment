@@ -10,14 +10,189 @@
 		<title>store management application</title>
 	</head>
 	<body>
-		<main class="dashboard-page d-flex">
+		<main class="reports-page list-page d-flex">
 			<div id="sidebar"></div>
 			<div class="body flex-1">
 				<div id="header"></div>
+				<h1>Reports</h1>
+				<div class="form">
+					<div class="form-date d-flex align-items-center gap-4">
+						<div class="input-box">
+							<p>Form Date</p>
+							<div
+								class="data d-flex align-items-center justify-content-between"
+							>
+								<input type="number" placeholder="23/11/2022" />
+								<img src="assets/inward/calender.svg" alt="calender" />
+							</div>
+						</div>
+						<div class="input-box">
+							<p>Form Date</p>
+							<div
+								class="data d-flex align-items-center justify-content-between"
+							>
+								<input type="number" placeholder="23/11/2022" />
+								<img src="assets/inward/calender.svg" alt="calender" />
+							</div>
+						</div>
+					</div>
+					<div class="form-two d-flex align-items-center gap-4">
+						<div class="input-box">
+							<p>Details</p>
+							<div class="dropdown">
+								<div class="select">
+									<span>Inward</span>
+									<div class="caret"></div>
+								</div>
+								<ul class="menu">
+									<li>Inward</li>
+									<li>Inward</li>
+									<li>Inward</li>
+									<li>Inward</li>
+								</ul>
+							</div>
+						</div>
+						<div class="input-box company">
+							<p>Company Name</p>
+							<div class="dropdown">
+								<div class="select">
+									<span>Company Name</span>
+									<div class="caret"></div>
+								</div>
+								<ul class="menu">
+									<li>Lucky Paper mart</li>
+									<li>Lucky Paper mart</li>
+									<li>Lucky Paper mart</li>
+									<li>Lucky Paper mart</li>
+								</ul>
+							</div>
+						</div>
+						<div class="input-box">
+							<p>Department</p>
+							<div class="dropdown">
+								<div class="select">
+									<span>Spinning</span>
+									<div class="caret"></div>
+								</div>
+								<ul class="menu">
+									<li>Spinning</li>
+									<li>Spinning</li>
+									<li>Spinning</li>
+									<li>Spinning</li>
+								</ul>
+							</div>
+						</div>
+						<button class="search-btn">search</button>
+					</div>
+					<div class="download-box">
+						<button>
+							Download <img src="assets/inward/download.svg" alt="download" />
+						</button>
+					</div>
+					<div class="warper position-relative">
+						<table>
+							<thead>
+								<tr>
+									<th>S.no</th>
+									<th>Date</th>
+									<th>Invoice No</th>
+									<th>Party Name</th>
+									<th>Material Details</th>
+									<th>Department</th>
+									<th>Qty</th>
+									<th>Bill Amount</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
+									<td>Timing Belt 5mm</td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
+									<td>Timing Belt 5mm</td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85<br /></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
+									<td>Timing Belt 5mm<br /></td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
+									<td>Timing Belt 5mm<br /></td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85<br /></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>11/11/23</td>
+									<td>SSM100023</td>
+									<td>Lucky Paper Code</td>
+									<td>Timing Belt 5mm<br /></td>
+									<td>Spinning</td>
+									<td>234</td>
+									<td>10,234.85<br /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="not-found active">
+						<p>No records Found</p>
+					</div>
+				</div>
 			</div>
 		</main>
 		<!-- js -->
 		<script src="js/sidebar.js"></script>
 		<script src="js/header.js"></script>
+		<script src="js/select-box.js"></script>
+		<script>
+			const selectBoxes = document.querySelectorAll(".dropdown")
+			const inputsDate = document.querySelectorAll(".data input")
+			const searchBtn = document.querySelector(".search-btn")
+			const downloadBtn = document.querySelector(".download-box button")
+			const notFoundP = document.querySelector(".not-found")
+			const tbody = document.querySelector("tbody")
+			let inputValues = []
+			searchBtn.onclick = () => {
+				inputValues = []
+				inputsDate.forEach((input) => {
+					if (
+						input.value !== "" &&
+						inputValues.includes(input.value) === false
+					) {
+						inputValues.push(input.value)
+					}
+				})
+				const valuesLength = inputValues.length + selectedArr.length
+				const elementsNum = selectBoxes.length + inputsDate.length
+				if (valuesLength === elementsNum) {
+					downloadBtn.classList.add("active")
+					tbody.classList.add("active")
+					notFoundP.classList.remove("active")
+				}
+			}
+		</script>
 	</body>
 </html>
