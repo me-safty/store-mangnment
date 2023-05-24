@@ -16,7 +16,10 @@
 				<div id="header"></div>
 				<div class="create-new">
 					<h1 class="d-flex align-items-center gap-1">
-						<img src="assets/inward/Arrow.svg" alt="arrow" /> Create New Inward
+						<a href="./inward.html">
+							<img src="assets/inward/Arrow.svg" alt="arrow" />
+						</a>
+						Create New Inward
 					</h1>
 					<div class="item d-flex align-items-center justify-content-center">
 						<div class="party-form">
@@ -341,7 +344,7 @@
 			const partyFormSelectBox = document.querySelector(".party-form .dropdown")
 			const partyFormSelectBoxLis = document.querySelectorAll(
 				".party-form .dropdown li"
-			)
+				)
 			const partyFormPartyD = document.querySelector(".party-form .party-d")
 			partyFormSelectBoxLis.forEach((li) => {
 				li.onclick = () => {
@@ -349,6 +352,11 @@
 					partyFormPartyD.classList.add("active")
 				}
 			})
+			const changePartyBtn = document.querySelector(".party-form .change-party-btn button")
+			changePartyBtn.onclick = () => {
+				partyFormSelectBox.style.display = "block"
+				partyFormPartyD.classList.remove("active")
+			}
 
 			const savePopup = document.querySelector(".save-overlay")
 			const saveBtn = document.querySelector(".save-btn")

@@ -7,113 +7,16 @@ sidebar.innerHTML = `
 <ul>
 	<li>
 		<a class="d-flex align-items-center gap-2" href="./dashboard.html">
-			<svg
-				width="24"
-				height="23"
-				viewBox="0 0 24 23"
-				fill="#f00"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<g filter="url(#filter0_d_1315_661)">
-					<path
-						d="M0 21.4V19.4H24V21.4H0ZM1.2 17.8V9.6H4.39998V17.8H1.2ZM7.32 17.8V3.6H10.52V17.8H7.32ZM13.46 17.8V7.2H16.66V17.8H13.46ZM19.6 17.8V0H22.8V17.8H19.6Z"
-						fill="white"
-					/>
-				</g>
-				<defs>
-					<filter
-						id="filter0_d_1315_661"
-						x="-4"
-						y="0"
-						width="32"
-						height="29.4"
-						filterUnits="userSpaceOnUse"
-						color-interpolation-filters="sRGB"
-					>
-						<feFlood flood-opacity="0" result="BackgroundImageFix" />
-						<feColorMatrix
-							in="SourceAlpha"
-							type="matrix"
-							values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-							result="hardAlpha"
-						/>
-						<feOffset dy="4" />
-						<feGaussianBlur stdDeviation="2" />
-						<feComposite in2="hardAlpha" operator="out" />
-						<feColorMatrix
-							type="matrix"
-							values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-						/>
-						<feBlend
-							mode="normal"
-							in2="BackgroundImageFix"
-							result="effect1_dropShadow_1315_661"
-						/>
-						<feBlend
-							mode="normal"
-							in="SourceGraphic"
-							in2="effect1_dropShadow_1315_661"
-							result="shape"
-						/>
-					</filter>
-				</defs>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="none">
+				<path d="M0 21.4V19.4H24V21.4H0ZM1.2 17.8V9.6H4.39998V17.8H1.2ZM7.32 17.8V3.6H10.52V17.8H7.32ZM13.46 17.8V7.2H16.66V17.8H13.46ZM19.6 17.8V0H22.8V17.8H19.6Z" fill="white"/>
 			</svg>
-
 			<p>Dashboard</p>
 		</a>
 	</li>
 	<li>
 		<a class="d-flex align-items-center gap-2" href="./inward.html">
-			<svg
-				width="24"
-				height="21"
-				viewBox="0 0 24 21"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<g filter="url(#filter0_d_1315_709)">
-					<path
-						d="M3.16797 17.8336V12.167H4.83462V16.167H8.83462V17.8336H3.16797ZM15.168 17.8336V16.167H19.168V12.167H20.8346V17.8336H15.168ZM7.17629 12.592L5.98464 11.4253L7.57629 9.83364H2.16797V8.16699H7.57629L5.98464 6.57532L7.17629 5.40867L10.7679 9.00032L7.17629 12.592ZM16.8263 12.592L13.2346 9.00032L16.8263 5.40867L18.0179 6.57532L16.4263 8.16699H21.8346V9.83364H16.4263L18.0179 11.4253L16.8263 12.592ZM3.16797 5.83364V0.166992H8.83462V1.83364H4.83462V5.83364H3.16797ZM19.168 5.83364V1.83364H15.168V0.166992H20.8346V5.83364H19.168Z"
-						fill="#274C77"
-					/>
-				</g>
-				<defs>
-					<filter
-						id="filter0_d_1315_709"
-						x="-1.83203"
-						y="0.166992"
-						width="27.668"
-						height="25.6666"
-						filterUnits="userSpaceOnUse"
-						color-interpolation-filters="sRGB"
-					>
-						<feFlood flood-opacity="0" result="BackgroundImageFix" />
-						<feColorMatrix
-							in="SourceAlpha"
-							type="matrix"
-							values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-							result="hardAlpha"
-						/>
-						<feOffset dy="4" />
-						<feGaussianBlur stdDeviation="2" />
-						<feComposite in2="hardAlpha" operator="out" />
-						<feColorMatrix
-							type="matrix"
-							values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-						/>
-						<feBlend
-							mode="normal"
-							in2="BackgroundImageFix"
-							result="effect1_dropShadow_1315_709"
-						/>
-						<feBlend
-							mode="normal"
-							in="SourceGraphic"
-							in2="effect1_dropShadow_1315_709"
-							result="shape"
-						/>
-					</filter>
-				</defs>
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
+				<path d="M1.16797 17.8336V12.167H2.83462V16.167H6.83462V17.8336H1.16797ZM13.168 17.8336V16.167H17.168V12.167H18.8346V17.8336H13.168ZM5.17629 12.592L3.98464 11.4253L5.57629 9.83364H0.167969V8.16699H5.57629L3.98464 6.57532L5.17629 5.40867L8.76794 9.00032L5.17629 12.592ZM14.8263 12.592L11.2346 9.00032L14.8263 5.40867L16.0179 6.57532L14.4263 8.16699H19.8346V9.83364H14.4263L16.0179 11.4253L14.8263 12.592ZM1.16797 5.83364V0.166992H6.83462V1.83364H2.83462V5.83364H1.16797ZM17.168 5.83364V1.83364H13.168V0.166992H18.8346V5.83364H17.168Z" fill="#274C77"/>
 			</svg>
 
 			<p>Inward</p>

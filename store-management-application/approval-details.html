@@ -16,16 +16,28 @@
 				<div id="header"></div>
 				<div class="create-new">
 					<h1 class="d-flex align-items-center gap-1">
-						<img src="assets/inward/Arrow.svg" alt="arrow" /> Approval
+						<a href="./approval.html">
+							<img src="assets/inward/Arrow.svg" alt="arrow" />
+						</a>
+						Approval
 					</h1>
 					<div class="item d-flex align-items-center justify-content-center">
 						<div class="party-form">
 							<div class="head">
 								<p>Party Form</p>
 							</div>
-							<div
-								class="body h-75 d-flex align-items-center justify-content-center"
-							>
+							<div class="body d-flex justify-content-center">
+								<div class="dropdown w-75">
+									<div class="select">
+										<span>Enter Company Name</span>
+										<div class="caret"></div>
+									</div>
+									<ul class="menu">
+										<li>Lucky Paper Cone,coimabatore</li>
+										<li>Lucky Paper Cone</li>
+										<li>Lucky Paper Cone</li>
+									</ul>
+								</div>
 								<div class="d-flex party-d justify-content-between w-100 mt-4">
 									<div class="d-flex flex-column align-items-start">
 										<h2>Lucky Paper Code</h2>
@@ -303,6 +315,25 @@
 		<script src="js/calender.js"></script>
 		<script src="js/onChangeForCreateNewPages.js"></script>
 		<script>
+			const partyFormSelectBox = document.querySelector(".party-form .dropdown")
+			const partyFormSelectBoxLis = document.querySelectorAll(
+				".party-form .dropdown li"
+			)
+			const partyFormPartyD = document.querySelector(".party-form .party-d")
+			partyFormSelectBoxLis.forEach((li) => {
+				li.onclick = () => {
+					partyFormPartyD.classList.remove("hidden")
+					partyFormSelectBox.classList.remove("active")
+				}
+			})
+			const changePartyBtn = document.querySelector(
+				".party-form .change-party-btn button"
+			)
+			changePartyBtn.onclick = () => {
+				partyFormPartyD.classList.add("hidden")
+				partyFormSelectBox.classList.add("active")
+			}
+
 			const savePopup = document.querySelector(".save-overlay , .list-popup")
 			const saveBtn = document.querySelector(
 				".save-btn , .update-btn , .back-to-list"

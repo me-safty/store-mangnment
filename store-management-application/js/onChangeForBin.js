@@ -5,6 +5,11 @@ rows.forEach((row) => {
 		...row.children[3].children,
 		row.children[2].children[1],
 	]
+	const selectBoxesSpan = [
+		row.children[1].children[0].children[0].children[0],
+		row.children[3].children[0].children[0].children[0],
+		row.children[2].children[1].children[0].children[0],
+	]
 	const inputsDate = row.children[2].children[0]
 	const bin = row.children[4].children[0]
 	let selectedLis = []
@@ -59,4 +64,30 @@ rows.forEach((row) => {
 	})
 
 	inputsDate.oninput = () => trackSelectBoxAndInputChange()
+
+	// click bin btn functionality
+	bin.onclick = () => {
+		trackSelectBoxAndInputChange()
+		if (valuesLength === elementsNum) {
+			// empty the selected item text
+			selectBoxesSpan.forEach((span) => {
+				if (span.innerHTML !== "kg") {
+					span.innerHTML = ""
+				}
+			})
+			// remove the selected class from all selected boxes
+			selectBoxes.forEach((box) => {
+				if (box.children[0].children[0].innerHTML !== "kg") {
+					const lis = [...box.children[1].children]
+					lis.forEach((li) => {
+						if (li.classList.contains("selected")) {
+							li.classList.remove("selected")
+						}
+					})
+				}
+			})
+			// empty the value of the input number
+			inputsDate.value = ""
+		}
+	}
 })
