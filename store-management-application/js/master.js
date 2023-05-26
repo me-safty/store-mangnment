@@ -130,7 +130,7 @@ onChangeForCreateNewPages(
 // edit-popup
 const editPopup2 = document.querySelector(".edit-popup")
 const successfullyEditPopup = document.querySelector(".update-popup")
-const selectBoxesEditPopup = document.querySelectorAll(".edit-popup .dropdown")
+const selectBoxesEditPopup = document.querySelectorAll(".edit-popup .dropdown:not(.read-only)")
 const inputsDateEditPopup = document.querySelectorAll(".edit-popup input")
 const selectBoxLisEditPopup = document.querySelectorAll(".edit-popup li")
 const saveBtnEditPopup = document.querySelector(".edit-popup .back-to-list")

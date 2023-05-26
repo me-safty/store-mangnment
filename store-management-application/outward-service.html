@@ -279,18 +279,12 @@
 						>
 							<div class="input-box w-50">
 								<p>Party From</p>
-								<input type="text" placeholder="Lucky Paper Code" />
+								<input class="no-validation" readonly type="text" placeholder="Lucky Paper Code" />
 							</div>
 							<div class="input-box w-50">
 								<p>Invoice Date</p>
-								<div class="d-flex w-100 calender-box data p-1 m-0">
-									<input
-										type="text"
-										id="custom-date"
-										placeholder="DD-MM-YYYY"
-										readonly
-										class="w-100 p-1"
-									/>
+								<div class="d-flex w-100 data p-0 m-0 justify-content-around">
+									<input class="no-validation" readonly type="text" placeholder="22/11/2023" />
 									<img
 										class="pe-1"
 										src="assets/inward/calender.svg"
@@ -304,14 +298,8 @@
 						>
 							<div class="input-box w-50">
 								<p>Material Sending Date</p>
-								<div class="d-flex w-100 calender-box data p-1 m-0">
-									<input
-										type="text"
-										id="custom-date"
-										placeholder="DD-MM-YYYY"
-										readonly
-										class="w-100 p-1"
-									/>
+								<div class="d-flex w-100 data p-1 m-0 justify-content-around">
+									<input readonly class="no-validation" type="text" placeholder="22/11/2023" />
 									<img
 										class="pe-1"
 										src="assets/inward/calender.svg"
@@ -327,7 +315,7 @@
 										id="custom-date"
 										placeholder="DD-MM-YYYY"
 										readonly
-										class="w-100 p-1"
+										class="w-100 p-2"
 									/>
 									<img
 										class="pe-1"
@@ -355,7 +343,7 @@
 										<button>Rs</button>
 										<input type="number" />
 									</div>
-									<input type="number" />
+									<input class="no-validation" type="number" />
 								</div>
 							</div>
 						</div>

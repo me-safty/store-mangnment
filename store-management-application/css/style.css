@@ -27,6 +27,27 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 /* start custom calender  */
 /* Custom styles for the date picker */
+.chartjs {
+	width: 400px;
+	height: 600px;
+	margin-top: 40px;
+	margin-left: 9px;
+}
+.chartJsToolTip {
+}
+.chartJsToolTip tbody {
+	display: block;
+	height: fit-content;
+	overflow: hidden;
+	/* width: 300px; */
+	color: #fff;
+}
+.chartJsToolTip th,
+.chartJsToolTip td {
+	border-bottom-color: transparent;
+	/* width: 300px !important; */
+	padding: 5px;
+}
 .calender-box.data {
 	border: 1px solid #7777774d;
 	border-radius: 5px;
@@ -98,6 +119,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 img[alt="del"] {
 	filter: grayscale(1);
+}
+input.no-validation {
+	color: var(--main-font-color);
 }
 /* end custom calender  */
 /* container  */
@@ -409,19 +433,44 @@ header .close-sidebar-btn:hover {
 .dashboard-page .body .yearly h2 {
 	margin-top: 30px;
 }
-.dashboard-page .material a {
+.dashboard-page a {
 	text-decoration: none;
 	color: #000;
+}
+.dashboard-page .monthly-report {
+	border-radius: 10px;
+	border: 1px solid #7777773a;
+	overflow: hidden;
+	margin-bottom: 120px;
+}
+.dashboard-page .monthly-report .head {
+	background: var(--main-color);
+	color: #fff;
+	padding: 9px;
+}
+.dashboard-page .monthly-report .body p {
+	padding: 20px 0;
+	font-weight: 500;
+}
+.dashboard-page .monthly-report .body div:nth-child(2) p {
+	color: var(--main-color);
+}
+.dashboard-page .monthly-report p {
+	margin: 0;
+	font-size: 22px;
 }
 /* table */
 table {
 	table-layout: fixed;
 	border-collapse: collapse;
-	width: 600px;
+	/* width: 600px; */
 	margin: 15px;
 	font-family: Arial, sans-serif;
 	border-radius: 10px;
 	overflow: hidden;
+}
+.dashboard-page table {
+	width: 600px;
 }
 thead {
 	background-color: var(--main-color);
@@ -470,7 +519,7 @@ tfoot td {
 	width: 100%;
 	display: block;
 	padding-block: 3px;
-}
+} 
 
 .dashboard-page .outward td:first-child,
 .dashboard-page .outward th:first-child {
@@ -489,8 +538,8 @@ tfoot td {
 .dashboard-page .chart {
 	border: 1px solid #77777728;
 	border-radius: 20px;
-	padding: 40px;
-	width: 460px;
+	padding: 20px 20px 20px 40px;
+	width: 500px;
 	height: 320px;
 }
 .dashboard-page .chart .line {
@@ -512,7 +561,7 @@ tfoot td {
 	position: absolute;
 	transform: rotate(270deg);
 	bottom: 170px;
-	left: -35px;
+	left: -52px;
 	margin: 0;
 	font-size: 13px;
 }
@@ -544,22 +593,22 @@ tfoot td {
 .dashboard-page .unit .inward {
 	width: 30px;
 	height: 70px;
-	background: #02a0fc;
+	background: #e19d00;
 }
 .dashboard-page .unit .outward {
 	width: 30px;
+	background: #02a0fc;
 	height: 70px;
-	background: #e19d00;
 }
 .dashboard-page .info .box {
 	width: 12px;
 	height: 12px;
 }
 .dashboard-page .info .inward-info .box {
-	background-color: #02a0fc;
+	background-color: #e19d00;
 }
 .dashboard-page .info .outward-info .box {
-	background-color: #e19d00;
+	background-color: #02a0fc;
 }
 .dashboard-page .info p {
 	margin: 0;
@@ -953,6 +1002,12 @@ tfoot td {
 	width: 70%;
 }
 /* dropdown menu  */
+.dropdown.read-only span {
+	color: var(--main-font-color);
+}
+.dropdown.read-only .caret {
+	border-color: var(--main-font-color) transparent transparent transparent;
+}
 .dropdown .select {
 	color: #fff;
 	font-size: 17px;
@@ -1236,6 +1291,9 @@ tfoot td {
 .new-outward-page .create-new .invoice .head {
 	padding-inline: 30px;
 }
+.outward-details img[alt="del"] {
+	filter: grayscale(0);
+}
 /* end create new outward */
 /* start outward service page */
 .outward-inside-page .create-new .data {
@@ -1452,6 +1510,7 @@ tfoot td {
 }
 .approval-details-page .party-form .party-d {
 	display: flex !important;
+	background: #fff;
 }
 .approval-details-page .party-form .party-d.hidden {
 	display: none !important;

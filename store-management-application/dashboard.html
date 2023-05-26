@@ -119,93 +119,18 @@
 						<div class="monthly">
 							<h2>Monthly Report</h2>
 							<a class="text-black" href="./reports.html">
-								<div class="chart position-relative">
-									<p class="y">Units of Inward & Outward</p>
-									<div class="line y"></div>
-									<div class="line x"></div>
-									<div
-										class="info d-flex gap-2 align-items-center justify-content-center"
-									>
-										<div
-											class="inward-info d-flex gap-2 align-items-center justify-content-center"
-										>
-											<div class="box"></div>
-											<p>Inward</p>
-										</div>
-										<div
-											class="outward-info d-flex gap-2 align-items-center justify-content-center"
-										>
-											<div class="box"></div>
-											<p>Outward</p>
-										</div>
+								<div class="monthly-report">
+									<div class="head">
+										<p>May 2023</p>
 									</div>
-									<div
-										class="bars d-flex justify-content-center align-items-center gap-2"
-									>
-										<div
-											data-month="Jan"
-											class="unit d-flex gap-1 position-relative align-items-end"
-										>
-											<div
-												data-num="2.22"
-												class="inward position-relative"
-											></div>
-											<div
-												data-num="4.22"
-												class="outward position-relative"
-											></div>
+									<div class="body py-3 d-flex align-items-center justify-content-around">
+										<div class="">
+											<p>Total Inward</p>
+											<p>Total Outward</p>
 										</div>
-										<div
-											data-month="Feb"
-											class="unit d-flex gap-1 position-relative align-items-end"
-										>
-											<div
-												data-num="3.22"
-												class="inward position-relative"
-											></div>
-											<div
-												data-num="2.52"
-												class="outward position-relative"
-											></div>
-										</div>
-										<div
-											data-month="March"
-											class="unit d-flex gap-1 position-relative align-items-end"
-										>
-											<div
-												data-num="3.92"
-												class="inward position-relative"
-											></div>
-											<div
-												data-num="2.22"
-												class="outward position-relative"
-											></div>
-										</div>
-										<div
-											data-month="April"
-											class="unit d-flex gap-1 position-relative align-items-end"
-										>
-											<div
-												data-num="3.12"
-												class="inward position-relative"
-											></div>
-											<div
-												data-num="2.22"
-												class="outward position-relative"
-											></div>
-										</div>
-										<div
-											data-month="May"
-											class="unit d-flex gap-1 position-relative align-items-end"
-										>
-											<div
-												data-num="4.22"
-												class="inward position-relative"
-											></div>
-											<div
-												data-num="2.22"
-												class="outward position-relative"
-											></div>
+										<div class="">
+											<p>Rs.2,45,500</p>
+											<p>Rs.1,95,500</p>
 										</div>
 									</div>
 								</div>
@@ -214,8 +139,9 @@
 						<div class="yearly">
 							<h2>Yearly Report</h2>
 							<a class="text-black" href="./reports.html">
-								<div class="chart position-relative">
+								<div class="chart position-relative d-flex align-items-center justify-content-center">
 									<p class="y">Units of Inward & Outward</p>
+									<canvas class="chartjs" id="myChart"></canvas>
 									<div class="line y"></div>
 									<div class="line x"></div>
 									<div
@@ -234,75 +160,75 @@
 											<p>Outward</p>
 										</div>
 									</div>
-									<div
-										class="bars d-flex justify-content-center align-items-center gap-2"
-									>
-										<div
-											data-month="2019"
-											class="unit d-flex gap-1 position-relative align-items-end"
+										<!-- <div
+											class="bars d-flex justify-content-center align-items-center gap-2"
 										>
 											<div
-												data-num="2.22"
-												class="inward position-relative"
-											></div>
+												data-month="2019"
+												class="unit d-flex gap-1 position-relative align-items-end"
+											>
+												<div
+													data-num="2.22"
+													class="inward position-relative"
+												></div>
+												<div
+													data-num="4.22"
+													class="outward position-relative"
+												></div>
+											</div>
 											<div
-												data-num="4.22"
-												class="outward position-relative"
-											></div>
-										</div>
-										<div
-											data-month="2020"
-											class="unit d-flex gap-1 position-relative align-items-end"
-										>
+												data-month="2020"
+												class="unit d-flex gap-1 position-relative align-items-end"
+											>
+												<div
+													data-num="3.22"
+													class="inward position-relative"
+												></div>
+												<div
+													data-num="2.52"
+													class="outward position-relative"
+												></div>
+											</div>
 											<div
-												data-num="3.22"
-												class="inward position-relative"
-											></div>
+												data-month="2021"
+												class="unit d-flex gap-1 position-relative align-items-end"
+											>
+												<div
+													data-num="3.92"
+													class="inward position-relative"
+												></div>
+												<div
+													data-num="2.22"
+													class="outward position-relative"
+												></div>
+											</div>
 											<div
-												data-num="2.52"
-												class="outward position-relative"
-											></div>
-										</div>
-										<div
-											data-month="2021"
-											class="unit d-flex gap-1 position-relative align-items-end"
-										>
+												data-month="2022"
+												class="unit d-flex gap-1 position-relative align-items-end"
+											>
+												<div
+													data-num="3.12"
+													class="inward position-relative"
+												></div>
+												<div
+													data-num="2.22"
+													class="outward position-relative"
+												></div>
+											</div>
 											<div
-												data-num="3.92"
-												class="inward position-relative"
-											></div>
-											<div
-												data-num="2.22"
-												class="outward position-relative"
-											></div>
-										</div>
-										<div
-											data-month="2022"
-											class="unit d-flex gap-1 position-relative align-items-end"
-										>
-											<div
-												data-num="3.12"
-												class="inward position-relative"
-											></div>
-											<div
-												data-num="2.22"
-												class="outward position-relative"
-											></div>
-										</div>
-										<div
-											data-month="2023"
-											class="unit d-flex gap-1 position-relative align-items-end"
-										>
-											<div
-												data-num="4.22"
-												class="inward position-relative"
-											></div>
-											<div
-												data-num="2.22"
-												class="outward position-relative"
-											></div>
-										</div>
-									</div>
+												data-month="2023"
+												class="unit d-flex gap-1 position-relative align-items-end"
+											>
+												<div
+													data-num="4.22"
+													class="inward position-relative"
+												></div>
+												<div
+													data-num="2.22"
+													class="outward position-relative"
+												></div>
+											</div>
+										</div> -->
 								</div>
 							</a>
 						</div>
@@ -314,5 +240,280 @@
 		<script src="js/home.js"></script>
 		<script src="js/sidebar.js"></script>
 		<script src="js/header.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script>
+			const ctx = document.getElementById("myChart")
+			const labels = ["", "Jun", "Feb", "March", "April", "May", ""]
+			const data = {
+				labels: labels,
+				datasets: [
+					{
+						label: "fale",
+						legend: false,
+						data: [0, 35.43, 80.432424, 50.4343, 70, 84, 0],
+						fill: true,
+						borderColor: "#002D47",
+						backgroundColor: "#B9E5FF",
+						tension: 0.1,
+						pointBackgroundColor: "#002D47",
+						pointBorderWidth: 3,
+						tension: 0.4,
+					}
+				],
+			}
+			new Chart(ctx, {
+				type: "line",
+				data: data,
+				options: {
+					responsive: true,
+					plugins: {
+						legend: {
+							display: false
+						},
+						tooltip: {
+							// Disable the on-canvas tooltip
+							enabled: false,
+
+							external: function (context) {
+								// Tooltip Element
+								let tooltipEl = document.getElementById("chartjs-tooltip")
+								console.log(tooltipEl)
+
+								// Create element on first render
+								if (!tooltipEl) {
+									tooltipEl = document.createElement("div")
+									tooltipEl.id = "chartjs-tooltip"
+									tooltipEl.innerHTML =
+										"<table></table>"
+									document.body.appendChild(tooltipEl)
+								}
+
+								// Hide if no tooltip
+								const tooltipModel = context.tooltip
+								if (tooltipModel.opacity === 0) {
+									tooltipEl.style.opacity = 0
+									return
+								}
+								tooltipEl.classList.add("chartJsToolTip")
+
+								// Set caret Position
+								tooltipEl.classList.remove("above", "below", "no-transform")
+								if (tooltipModel.yAlign) {
+									tooltipEl.classList.add(tooltipModel.yAlign)
+								} else {
+									tooltipEl.classList.add("no-transform")
+								}
+
+								function getBody(bodyItem) {
+									return bodyItem.lines
+								}
+
+								// Set Text
+								if (tooltipModel.body) {
+									console.log(tooltipModel.dataPoints[0].raw)
+									const titleLines = tooltipModel.title || []
+									const bodyLines = tooltipModel.body.map(getBody)
+
+									let innerHtml = "<thead style='width: 300px;'>"
+
+									titleLines.forEach(function (title) {
+										innerHtml += "<tr><th>" + title + "</th></tr>"
+									})
+									innerHtml += "</thead><tbody>"
+
+									bodyLines.forEach(function (body, i) {
+										const colors = tooltipModel.labelColors[i]
+										let style = ""
+										style += "; border-color:" + colors.borderColor
+										style += "; border-width: 2px"
+										const div = `
+										<div style="color: #000; font-size: 16px">
+										<div style="color: #e19d00; display: inline-block; " class=" pe-3">Inward:</div>
+										Rs.${tooltipModel.dataPoints[0].raw}
+										<br />
+										<div style="color: #02a0fc; display: inline-block "class="pe-1">Outward: </div>
+										Rs.${tooltipModel.dataPoints[0].raw}
+									</div>
+										`
+										innerHtml += "<tr><td>" + div + "</td></tr>"
+									})
+									innerHtml += "</tbody>"
+
+									let tableRoot = tooltipEl.querySelector("table")
+									tableRoot.innerHTML = innerHtml
+								}
+
+								const position = context.chart.canvas.getBoundingClientRect()
+								const bodyFont = Chart.helpers.toFont(
+									tooltipModel.options.bodyFont
+								)
+
+								// Display, position, and set styles for font
+								tooltipEl.style.opacity = 1
+								tooltipEl.style.position = "absolute"
+								tooltipEl.style.left =
+									position.left +
+									window.pageXOffset +
+									tooltipModel.caretX +
+									"px"
+								tooltipEl.style.top =
+									position.top + window.pageYOffset + tooltipModel.caretY + "px"
+								tooltipEl.style.font = bodyFont.string
+								tooltipEl.style.padding =
+									tooltipModel.padding + "px " + tooltipModel.padding + "px"
+								tooltipEl.style.pointerEvents = "none"
+							},
+						},
+					},
+
+					// plugins: {
+					// 	title: {
+					// 		display: true,
+					// 		text: "Chart.js Line Chart",
+					// 	},
+					// },
+					// interaction: {
+					// 	mode: "index",
+					// 	intersect: false,
+					// },
+					scales: {
+						// x: {
+						// 	display: true,
+						// 	title: {
+						// 		display: true,
+						// 		text: "Month",
+						// 	},
+						// },
+						y: {
+							display: false,
+							suggestedMin: 0,
+							suggestedMax: 100,
+						},
+					},
+				},
+			})
+			const getOrCreateTooltip = (chart) => {
+				let tooltipEl = chart.canvas.parentNode.querySelector("div")
+
+				if (!tooltipEl) {
+					tooltipEl = document.createElement("div")
+					tooltipEl.style.background = "rgba(0, 0, 0, 0.7)"
+					tooltipEl.style.borderRadius = "3px"
+					tooltipEl.style.color = "white"
+					tooltipEl.style.opacity = 1
+					tooltipEl.style.pointerEvents = "none"
+					tooltipEl.style.position = "absolute"
+					tooltipEl.style.transform = "translate(-50%, 0)"
+					tooltipEl.style.transition = "all .1s ease"
+
+					const table = document.createElement("table")
+					table.style.margin = "0px"
+
+					tooltipEl.appendChild(table)
+					chart.canvas.parentNode.appendChild(tooltipEl)
+				}
+
+				return tooltipEl
+			}
+
+			const externalTooltipHandler = (context) => {
+				// Tooltip Element
+				const { chart, tooltip } = context
+				const tooltipEl = getOrCreateTooltip(chart)
+
+				// Hide if no tooltip
+				if (tooltip.opacity === 0) {
+					tooltipEl.style.opacity = 0
+					return
+				}
+
+				// Set Text
+				if (tooltip.body) {
+					const titleLines = tooltip.title || []
+					const bodyLines = tooltip.body.map((b) => b.lines)
+
+					const tableHead = document.createElement("thead")
+
+					titleLines.forEach((title) => {
+						const tr = document.createElement("tr")
+						tr.style.borderWidth = 0
+
+						const th = document.createElement("th")
+						th.style.borderWidth = 0
+						const text = document.createTextNode(title)
+
+						th.appendChild(text)
+						tr.appendChild(th)
+						tableHead.appendChild(tr)
+					})
+
+					const tableBody = document.createElement("tbody")
+					bodyLines.forEach((body, i) => {
+						const colors = tooltip.labelColors[i]
+
+						const span = document.createElement("span")
+						span.style.background = colors.backgroundColor
+						span.style.borderColor = colors.borderColor
+						span.style.borderWidth = "2px"
+						span.style.marginRight = "10px"
+						span.style.height = "10px"
+						span.style.width = "10px"
+						span.style.display = "inline-block"
+
+						const tr = document.createElement("tr")
+						tr.style.backgroundColor = "inherit"
+						tr.style.borderWidth = 0
+
+						const td = document.createElement("td")
+						td.style.borderWidth = 0
+
+						const text = document.createTextNode(body)
+
+						td.appendChild(span)
+						td.appendChild(text)
+						tr.appendChild(td)
+						tableBody.appendChild(tr)
+					})
+
+					const tableRoot = tooltipEl.querySelector("table")
+
+					// Remove old children
+					while (tableRoot.firstChild) {
+						tableRoot.firstChild.remove()
+					}
+
+					// Add new children
+					tableRoot.appendChild(tableHead)
+					tableRoot.appendChild(tableBody)
+				}
+
+				const { offsetLeft: positionX, offsetTop: positionY } = chart.canvas
+
+				// Display, position, and set styles for font
+				tooltipEl.style.opacity = 1
+				tooltipEl.style.left = positionX + tooltip.caretX + "px"
+				tooltipEl.style.top = positionY + tooltip.caretY + "px"
+				tooltipEl.style.font = tooltip.options.bodyFont.string
+				tooltipEl.style.padding =
+					tooltip.options.padding + "px " + tooltip.options.padding + "px"
+			}
+			// {
+			// 		labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+			// 		datasets: [
+			// 			{
+			// 				label: "# of Votes",
+			// 				data: [12, 19, 3, 5, 2, 3],
+			// 				borderWidth: 1,
+			// 			},
+			// 		],
+			// 	},
+			// 	options: {
+			// 		scales: {
+			// 			y: {
+			// 				beginAtZero: true,
+			// 			},
+			// 		},
+			// 	},
+		</script>
 	</body>
 </html>

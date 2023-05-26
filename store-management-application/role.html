@@ -211,11 +211,21 @@
 						<div class="d-flex gap-5">
 							<div class="input-box p-0 w-50">
 								<p>Role Name <span>*</span></p>
-								<input type="text" placeholder="Spinning Master" />
+								<input
+									class="no-validation"
+									readonly
+									type="text"
+									placeholder="Spinning Master"
+								/>
 							</div>
 							<div class="input-box p-0 w-50">
 								<p>Department <span>*</span></p>
-								<input type="text" placeholder="Spinning" />
+								<input
+									class="no-validation"
+									readonly
+									type="text"
+									placeholder="Spinning"
+								/>
 							</div>
 						</div>
 						<div class="warper m-0 mt-4">
@@ -492,7 +502,7 @@
 			const editPopup2 = document.querySelector(".edit-popup")
 			const successfullyEditPopup = document.querySelector(".update-popup")
 			const selectBoxesEditPopup = document.querySelectorAll(
-				".edit-popup .dropdown"
+				".edit-popup .dropdown:not(.read-only)"
 			)
 			const inputsDateEditPopup = document.querySelectorAll(".edit-popup input")
 			const selectBoxLisEditPopup = document.querySelectorAll(".edit-popup li")
