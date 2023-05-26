@@ -4,7 +4,8 @@ function onChangeForCreateNewPages(
 	allInputsDate,
 	selectBoxLis,
 	btnFunction,
-	callbackFunc
+	callbackFunc,
+	callbackFuncIfFalse = () => undefined
 ) {
 	const inputsDate = []
 	allInputsDate.forEach((input) => {
@@ -18,7 +19,7 @@ function onChangeForCreateNewPages(
 	let valuesLength = inputValues.length + selectedLis.length
 	let elementsNum = selectBoxes.length + inputsDate.length
 
-	saveBtn.style.opacity = ".7"
+	// saveBtn.style.opacity = ".7"
 
 	function trackSelectBoxAndInputChange() {
 		selectedLis = []
@@ -38,12 +39,12 @@ function onChangeForCreateNewPages(
 		})
 		valuesLength = inputValues.length + selectedLis.length
 		elementsNum = selectBoxes.length + inputsDate.length
-		console.log(elementsNum, valuesLength)
 		if (valuesLength === elementsNum) {
 			saveBtn.style.opacity = "1"
 			callbackFunc()
 		} else {
 			saveBtn.style.opacity = ".7"
+			callbackFuncIfFalse()
 		}
 	}
 

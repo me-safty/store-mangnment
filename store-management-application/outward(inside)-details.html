@@ -352,11 +352,14 @@
 				() => {
 					updateBtn.children[0].href = "./outward-service.html"
 					updateBtn.style.opacity = "1"
+				},
+				() => {
+					updateBtn.children[0].href = "#"
+					updateBtn.style.opacity = ".7"
 				}
 			)
-
-						// add item functionality
-						const addBtn = document.querySelector(".add-btn")
+			// add item functionality
+			const addBtn = document.querySelector(".add-btn")
 			const tableBody = document.querySelector(".table .body")
 			addBtn.addEventListener("click", () => {
 				// rerun the onChangeForBin function with the new row
@@ -366,7 +369,6 @@
 				rows.forEach((row) => {
 					inputValuesBeforeResiting.push(row.children[2].children[0].value)
 				})
-
 				tableBody.innerHTML += `
 				<div class="row new-row">
 					<div class="col-1">1</div>
@@ -453,7 +455,14 @@
 						saveBtn.classList.add("active")
 						savePopup.style.display = "flex"
 					},
-					() => undefined
+					() => {
+						updateBtn.children[0].href = "./outward-service.html"
+						updateBtn.style.opacity = "1"
+					},
+					() => {
+						updateBtn.children[0].href = "#"
+						updateBtn.style.opacity = ".7"
+					}
 				)
 			})
 		</script>
