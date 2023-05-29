@@ -40,7 +40,7 @@
 										<div class="caret"></div>
 									</div>
 									<ul class="menu">
-										<li>Raja</li>
+										<li class="selected">Raja</li>
 										<li>Raja</li>
 										<li>Raja</li>
 										<li>Raja</li>
@@ -300,10 +300,9 @@
 		<script src="js/header.js"></script>
 		<script src="js/select-box.js"></script>
 		<script src="js/onChangeForCreateNewPages.js"></script>
-		<script src="js/onChangeForBin.js"></script>
 		<script>
 			const savePopup = document.querySelector(".save-overlay")
-			const saveBtn = document.querySelector(".save-btn")
+			const saveBtn = document.querySelector(".save-btn button")
 			const selectBoxes = document.querySelectorAll(".dropdown")
 			const inputsDate = document.querySelectorAll("input")
 			const selectBoxLis = document.querySelectorAll("li")
@@ -316,6 +315,41 @@
 				() => (savePopup.style.display = "flex"),
 				() => undefined
 			)
+			// delete functionality
+			let deleteBtns = document.querySelectorAll(
+				".table .body .row img[alt=del]"
+			)
+			deleteBtns.forEach((btn) => {
+				const row = btn.parentElement.parentElement
+				btn.addEventListener("click", () => {
+					row.remove()
+					deleteBtns = document.querySelectorAll(".table .body .row img[alt=del]")
+	
+					console.log(deleteBtns, "gergf")
+					console.log(btn.parentElement.parentElement)
+
+
+					const savePopup = document.querySelector(".save-overlay")
+					const saveBtn = document.querySelector(".save-btn button")
+					const selectBoxes = document.querySelectorAll(".dropdown")
+					const inputsDate = document.querySelectorAll("input")
+					const selectBoxLis = document.querySelectorAll("li")
+
+					onChangeForCreateNewPages(
+						saveBtn,
+						selectBoxes,
+						inputsDate,
+						selectBoxLis,
+						() => (savePopup.style.display = "flex"),
+						() => undefined
+					)
+				})
+			})
+			// document.addEventListener("click", () => {
+			// 	deleteBtns = document.querySelectorAll(".table .body .row img[alt=del]")
+			// 	console.log(deleteBtns)
+
+			// })
 
 			// add item functionality
 			const addBtn = document.querySelector(".add-btn")
@@ -380,6 +414,9 @@
 					</div>
 				</div>
 				`
+				// update the delete btns
+				deleteBtns = document.querySelectorAll(".table .body .row img[alt=del]")
+				console.log(deleteBtns)
 				// update the inputs values after resiting
 				const updatedRows = document.querySelectorAll(".table .body .row")
 				updatedRows.forEach((row, i) => {
@@ -388,7 +425,7 @@
 
 				const savePopup = document.querySelector(".save-overlay , .list-popup")
 				const saveBtn = document.querySelector(
-					".save-btn , .update-btn , .back-to-list"
+					".save-btn button , .update-btn button , .back-to-list button"
 				)
 				const selectBoxes = document.querySelectorAll(
 					".row:not(.new-row) .dropdown:not(.read-only)"
@@ -400,8 +437,7 @@
 					".new-row .dropdown:not(.read-only)"
 				)
 				useSelectBox([...newSelectedBoxes, ...selectBoxes])
-				// rerun the onChangeForBin function with the new row
-				onChangeForBin(updatedRows)
+
 				// rerun the onChangeForCreateNewPages functionality
 				const allSelectedBoxes = document.querySelectorAll(
 					".dropdown:not(.read-only)"
@@ -412,7 +448,6 @@
 					inputsDate,
 					selectBoxLis,
 					() => {
-						saveBtn.classList.add("active")
 						savePopup.style.display = "flex"
 					},
 					() => undefined

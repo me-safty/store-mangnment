@@ -41,9 +41,11 @@ function onChangeForCreateNewPages(
 		elementsNum = selectBoxes.length + inputsDate.length
 		if (valuesLength === elementsNum) {
 			saveBtn.style.opacity = "1"
+			saveBtn.disabled = false
 			callbackFunc()
 		} else {
 			saveBtn.style.opacity = ".7"
+			saveBtn.disabled = true
 			callbackFuncIfFalse()
 		}
 	}
@@ -81,6 +83,7 @@ function onChangeForCreateNewPages(
 	})
 
 	document.addEventListener("click", () => {
+		console.log(valuesLength, elementsNum)
 		trackSelectBoxAndInputChange()
 	})
 	trackSelectBoxAndInputChange()

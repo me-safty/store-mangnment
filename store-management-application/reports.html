@@ -184,6 +184,22 @@
 					<div class="not-found active">
 						<p>No records Found</p>
 					</div>
+					<div
+						class="pages d-flex align-items-center justify-content-end gap-2"
+					>
+						<div
+							class="d-flex align-items-center justify-content-center one active"
+						>
+							1
+						</div>
+						<div class="d-flex align-items-center justify-content-center two">
+							2
+						</div>
+						<div class="d-flex align-items-center justify-content-center three">
+							3
+						</div>
+						<button>Next</button>
+					</div>
 				</div>
 			</div>
 		</main>
@@ -192,32 +208,50 @@
 		<script src="js/header.js"></script>
 		<script src="js/select-box.js"></script>
 		<script src="js/calender.js"></script>
+		<script src="js/onChangeForCreateNewPages.js"></script>
 		<script>
-			const selectBoxes = document.querySelectorAll(".dropdown")
+			const selectBoxes = document.querySelectorAll(".dropdown:not(.read-only)")
+			const selectBoxLis = document.querySelectorAll("li")
+
 			const inputsDate = document.querySelectorAll(".data input")
 			const searchBtn = document.querySelector(".search-btn")
 			const downloadBtn = document.querySelector(".download-box button")
 			const notFoundP = document.querySelector(".not-found")
 			const tbody = document.querySelector("tbody")
-			let inputValues = []
-			searchBtn.onclick = () => {
-				inputValues = []
-				inputsDate.forEach((input) => {
-					if (
-						input.value !== "" &&
-						inputValues.includes(input.value) === false
-					) {
-						inputValues.push(input.value)
-					}
-				})
-				const valuesLength = inputValues.length + selectedArr.length
-				const elementsNum = selectBoxes.length + inputsDate.length
-				if (valuesLength === elementsNum) {
+			const pagesBtns = document.querySelector(".reports-page .pages")
+			onChangeForCreateNewPages(
+				searchBtn,
+				selectBoxes,
+				inputsDate,
+				selectBoxLis,
+				() => {
 					downloadBtn.classList.add("active")
 					tbody.classList.add("active")
 					notFoundP.classList.remove("active")
-				}
-			}
+					pagesBtns.classList.add("active")
+				},
+				() => undefined
+			)
+
+			// let inputValues = []
+			// searchBtn.onclick = () => {
+			// 	inputValues = []
+			// 	inputsDate.forEach((input) => {
+			// 		if (
+			// 			input.value !== "" &&
+			// 			inputValues.includes(input.value) === false
+			// 		) {
+			// 			inputValues.push(input.value)
+			// 		}
+			// 	})
+			// 	const valuesLength = inputValues.length + selectedArr.length
+			// 	const elementsNum = selectBoxes.length + inputsDate.length
+			// 	if (valuesLength === elementsNum) {
+			// 		downloadBtn.classList.add("active")
+			// 		tbody.classList.add("active")
+			// 		notFoundP.classList.remove("active")
+			// 	}
+			// }
 		</script>
 	</body>
 </html>

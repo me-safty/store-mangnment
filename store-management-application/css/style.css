@@ -33,8 +33,6 @@ input[type="number"]::-webkit-outer-spin-button {
 	margin-top: 40px;
 	margin-left: 9px;
 }
-.chartJsToolTip {
-}
 .chartJsToolTip tbody {
 	display: block;
 	height: fit-content;
@@ -118,7 +116,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	border-radius: 50%;
 }
 img[alt="del"] {
-	filter: grayscale(1);
+	/* filter: grayscale(1); */
 }
 input.no-validation {
 	color: var(--main-font-color);
@@ -519,7 +517,7 @@ tfoot td {
 	width: 100%;
 	display: block;
 	padding-block: 3px;
-} 
+}
 
 .dashboard-page .outward td:first-child,
 .dashboard-page .outward th:first-child {
@@ -1317,7 +1315,8 @@ tfoot td {
 	border: 1px solid #95641c;
 	border-radius: 1px 0;
 }
-.outward-service-page .replaced-btn {
+.outward-service-page .replaced-btn,
+.outward-service-page .waiting-approval {
 	background: transparent;
 	color: var(--main-color);
 	border: 1px solid var(--main-color);
@@ -1493,6 +1492,9 @@ tfoot td {
 	padding: 8px 10px;
 }
 /* end list popup */
+.approval-details-page .table-box {
+	margin-top: 70px;
+}
 /* start approval page */
 .approval-page th {
 	padding-block: 5px !important;
@@ -1700,6 +1702,12 @@ tfoot td {
 	opacity: 0.7;
 	cursor: auto;
 }
+.reports-page .pages {
+	display: none !important;
+}
+.reports-page .pages.active {
+	display: flex !important;
+}
 .reports-page table td {
 	padding-block: 20px;
 }
@@ -1712,7 +1720,7 @@ tfoot td {
 .reports-page .not-found {
 	text-align: center;
 	display: none;
-	margin-top: 100px;
+	margin-block: 100px;
 }
 .reports-page .not-found.active {
 	display: block;
@@ -2079,20 +2087,29 @@ tfoot td {
 	min-width: calc(300px / 3);
 	width: calc(300px / 3);
 }
-.role-page .edit-popup td > span {
-	display: none;
+.role-page .edit-popup td span {
 	width: fit-content;
 	margin: auto;
-	padding-inline: 13px;
+	padding: 0px 13px;
+	border-radius: 3px;
 }
-.role-page .edit-popup td > span.active {
-	display: block;
+.role-page .edit-popup tbody td > p {
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.role-page .edit-popup td > span.enable {
+.role-page .edit-popup tbody td > div {
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.role-page .edit-popup td span.enable {
 	background: #b1e4a8;
 	border: 1px solid #148d00;
 }
-.role-page .edit-popup td > span.disable {
+.role-page .edit-popup td span.disable {
 	background-color: #d3afaf;
 	border: 1px solid #ce0000;
 }

@@ -74,9 +74,6 @@
 						</div>
 					</div>
 					<div class="table-box">
-						<div>
-							<button class="add-btn">+ Add Item</button>
-						</div>
 						<div class="table">
 							<div class="row head">
 								<div class="col-4">Material</div>
@@ -86,7 +83,7 @@
 							<div class="body">
 								<div class="row">
 									<div class="col-4">
-										<div class="dropdown w-75">
+										<div class="dropdown read-only w-75">
 											<div class="select">
 												<span>Timing Belt 5mm</span>
 												<div class="caret"></div>
@@ -100,8 +97,13 @@
 										</div>
 									</div>
 									<div class="col-4 d-flex gap-2 justify-content-center">
-										<input type="number" value="06" />
-										<div class="dropdown">
+										<input
+											type="number"
+											readonly
+											class="no-validation"
+											value="06"
+										/>
+										<div class="dropdown read-only">
 											<div class="select">
 												<span>kg</span>
 												<div class="caret"></div>
@@ -131,7 +133,7 @@
 								</div>
 								<div class="row">
 									<div class="col-4">
-										<div class="dropdown w-75">
+										<div class="dropdown read-only w-75">
 											<div class="select">
 												<span>Timing Belt 5mm</span>
 												<div class="caret"></div>
@@ -145,8 +147,13 @@
 										</div>
 									</div>
 									<div class="col-4 d-flex gap-2 justify-content-center">
-										<input type="number" value="06" />
-										<div class="dropdown">
+										<input
+											type="number"
+											readonly
+											class="no-validation"
+											value="06"
+										/>
+										<div class="dropdown read-only">
 											<div class="select">
 												<span>kg</span>
 												<div class="caret"></div>
@@ -176,7 +183,7 @@
 								</div>
 								<div class="row">
 									<div class="col-4">
-										<div class="dropdown w-75">
+										<div class="dropdown read-only w-75">
 											<div class="select">
 												<span>Timing Belt 5mm</span>
 												<div class="caret"></div>
@@ -190,8 +197,13 @@
 										</div>
 									</div>
 									<div class="col-4 d-flex gap-2 justify-content-center">
-										<input type="number" value="06" />
-										<div class="dropdown">
+										<input
+											type="number"
+											readonly
+											class="no-validation"
+											value="06"
+										/>
+										<div class="dropdown read-only">
 											<div class="select">
 												<span>kg</span>
 												<div class="caret"></div>
@@ -221,7 +233,7 @@
 								</div>
 								<div class="row">
 									<div class="col-4">
-										<div class="dropdown w-75">
+										<div class="dropdown read-only w-75">
 											<div class="select">
 												<span>Timing Belt 5mm</span>
 												<div class="caret"></div>
@@ -235,8 +247,13 @@
 										</div>
 									</div>
 									<div class="col-4 d-flex gap-2 justify-content-center">
-										<input type="number" value="06" />
-										<div class="dropdown">
+										<input
+											type="number"
+											readonly
+											class="no-validation"
+											value="06"
+										/>
+										<div class="dropdown read-only">
 											<div class="select">
 												<span>kg</span>
 												<div class="caret"></div>
@@ -336,7 +353,7 @@
 
 			const savePopup = document.querySelector(".save-overlay , .list-popup")
 			const saveBtn = document.querySelector(
-				".save-btn , .update-btn , .back-to-list"
+				".save-btn button , .update-btn button , .back-to-list button"
 			)
 			const selectBoxes = document.querySelectorAll(".dropdown:not(.read-only)")
 			const inputsDate = document.querySelectorAll("input")
@@ -353,101 +370,6 @@
 				},
 				() => undefined
 			)
-
-			const addBtn = document.querySelector(".add-btn")
-			const tableBody = document.querySelector(".table .body")
-			addBtn.addEventListener("click", () => {
-				// rerun the onChangeForBin function with the new row
-				const rows = document.querySelectorAll(".table .body .row")
-				let inputValuesBeforeResiting = []
-				// save the inputs values from resiting
-				rows.forEach((row) => {
-					inputValuesBeforeResiting.push(row.children[1].children[0].value)
-				})
-				tableBody.innerHTML += `
-					<div class="row new-row">
-						<div class="col-4">
-							<div class="dropdown w-75">
-								<div class="select">
-									<span></span>
-									<div class="caret"></div>
-								</div>
-								<ul class="menu">
-									<li>Timing Belt 5mm</li>
-									<li>Timing Belt 5mm</li>
-									<li>Timing Belt 5mm</li>
-									<li>Timing Belt 5mm</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-4 d-flex gap-2 justify-content-center">
-							<input type="number" />
-							<div class="dropdown">
-								<div class="select">
-									<span>kg</span>
-									<div class="caret"></div>
-								</div>
-								<ul class="menu">
-									<li class="selected">kg</li>
-									<li>kg</li>
-									<li>kg</li>
-									<li>kg</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-4">
-							<div class="dropdown w-75">
-								<div class="select">
-									<span></span>
-									<div class="caret"></div>
-								</div>
-								<ul class="menu">
-									<li>Spinning</li>
-									<li>Spinning</li>
-									<li>Spinning</li>
-									<li>Spinning</li>
-								</ul>
-							</div>
-						</div>
-				`
-				const savePopup = document.querySelector(".save-overlay , .list-popup")
-				const saveBtn = document.querySelector(
-					".save-btn , .update-btn , .back-to-list"
-				)
-				const selectBoxes = document.querySelectorAll(
-					".dropdown:not(.read-only)"
-				)
-				const inputsDate = document.querySelectorAll("input")
-				const selectBoxLis = document.querySelectorAll("li")
-				// rerun the select box drop functionality with the new row
-				useSelectBox(selectBoxes)
-				// update the inputs values after resiting
-				const updatedRows = document.querySelectorAll(".table .body .row")
-				updatedRows.forEach((row, i) => {
-					row.children[1].children[0].value = inputValuesBeforeResiting[i]
-				})
-
-				// rerun the select box drop functionality with the new row
-				const newSelectedBoxes = document.querySelectorAll(
-					".new-row .dropdown:not(.read-only)"
-				)
-				useSelectBox([...newSelectedBoxes, ...selectBoxes])
-				// rerun the onChangeForCreateNewPages functionality
-				const allSelectedBoxes = document.querySelectorAll(
-					".dropdown:not(.read-only)"
-				)
-				onChangeForCreateNewPages(
-					saveBtn,
-					allSelectedBoxes,
-					inputsDate,
-					selectBoxLis,
-					() => {
-						saveBtn.classList.add("active")
-						savePopup.style.display = "flex"
-					},
-					() => undefined
-				)
-			})
 		</script>
 	</body>
 </html>

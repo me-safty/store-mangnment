@@ -197,15 +197,33 @@
 								<div class="d-flex input-date">
 									<p>Form Date</p>
 									<div class="d-flex">
-										<input type="text" id="custom-date" placeholder="DD-MM-YYYY" readonly>
-										<img class="pe-1" src="assets/inward/calender.svg" alt="calender">
+										<input
+											type="text"
+											id="custom-date"
+											placeholder="DD-MM-YYYY"
+											readonly
+										/>
+										<img
+											class="pe-1"
+											src="assets/inward/calender.svg"
+											alt="calender"
+										/>
 									</div>
 								</div>
 								<div class="d-flex input-date">
 									<p>To Date</p>
 									<div class="d-flex">
-										<input type="text" id="custom-date" placeholder="DD-MM-YYYY" readonly>
-										<img class="pe-1" src="assets/inward/calender.svg" alt="calender">
+										<input
+											type="text"
+											id="custom-date"
+											placeholder="DD-MM-YYYY"
+											readonly
+										/>
+										<img
+											class="pe-1"
+											src="assets/inward/calender.svg"
+											alt="calender"
+										/>
 									</div>
 								</div>
 							</div>
@@ -244,6 +262,140 @@
 							<button class="w-50 cancel-filter">Cancel</button
 							><button class="w-50 apply-filter">Apply Filter</button>
 						</div>
+					</div>
+				</div>
+			</div>
+			<!-- details popup -->
+			<div
+				class="overlay details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+			>
+				<div class="details-popup bg-white">
+					<div class="head d-flex justify-content-between align-items-center">
+						<h1>Inward Details</h1>
+						<button class="close-btn">
+							<img src="assets/inward/close.svg" alt="close-button" />
+						</button>
+					</div>
+					<div
+						class="body w-75 m-auto d-flex align-items-center justify-content-center flex-column"
+					>
+						<div
+							class="inputs d-flex align-items-center justify-content-center gap-10"
+						>
+							<div class="input-box w-50">
+								<p>Date</p>
+								<div class="d-flex justify-content-between data m-0 w-100 p-1">
+									<input
+										type="text"
+										placeholder="23/11/2022"
+										readonly
+										class="w-100 no-validation"
+									/>
+									<img
+										class="pe-1"
+										src="assets/inward/calender.svg"
+										alt="calender"
+									/>
+								</div>
+							</div>
+							<div class="who-took input-box w-50">
+								<p>Who Took</p>
+								<div class="dropdown read-only">
+									<div class="select">
+										<span>Raja</span>
+										<div class="caret"></div>
+									</div>
+									<ul class="menu">
+										<li>Raja</li>
+										<li>Raja</li>
+										<li>Raja</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="table w-100">
+							<div class="row head">
+								<div class="col-4">Material</div>
+								<div class="col-4">Qty</div>
+								<div class="col-4">Department</div>
+							</div>
+							<div class="body">
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">243</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">255</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">265</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">215</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">70</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">101</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">101</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">70</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">70</div>
+									<div class="col-4">Spinning</div>
+								</div>
+							</div>
+						</div>
+						<button class="back-to-list">Back to list</button>
+					</div>
+				</div>
+			</div>
+			<!-- update popup -->
+			<div
+				class="overlay update-popup new-inward-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+			>
+				<div class="popup bg-white">
+					<div
+						class="head d-flex gap-2 justify-content-center align-items-center"
+					>
+						<p>Outward(Service) Updated Successfully</p>
+						<img src="assets/login/tick.svg" alt="tick" />
+					</div>
+					<div class="budy d-flex align-items-center flex-column">
+						<div
+							class="gif position-relative d-flex align-items-center justify-content-around"
+						>
+							<img src="assets/gif/like-pop.gif" class="w-100" alt="success" />
+							<img src="assets/gif/true.gif" alt="success" />
+						</div>
+						<p class="message">
+							Outward(Service) Updated <br />
+							Successfully
+						</p>
+						<a href="./replacement.html">
+							<button class="close-btn">Close</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -303,5 +455,29 @@
 		<script src="js/select-box.js"></script>
 		<script src="js/inward.js"></script>
 		<script src="js/calender.js"></script>
+		<script>
+			const viewMoreBtns = document.querySelectorAll(
+				".list-page table td > span"
+			)
+			const detailsPopup = document.querySelector(
+				".list-page .details-popup-overlay"
+			)
+			const closeDetailsPopup = document.querySelector(
+				".list-page .details-popup-overlay .close-btn"
+			)
+			viewMoreBtns.forEach((btn) => {
+				btn.onclick = () => (detailsPopup.style.display = "flex")
+			})
+			closeDetailsPopup.onclick = () => (detailsPopup.style.display = "none")
+
+			const updatePopup = document.querySelector(".update-popup")
+			const backToListBtn = document.querySelector(
+				".details-popup .back-to-list"
+			)
+			backToListBtn.onclick = () => {
+				detailsPopup.style.display = "none"
+				updatePopup.style.display = "flex"
+			}
+		</script>
 	</body>
 </html>

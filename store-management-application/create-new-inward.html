@@ -361,7 +361,7 @@
 			}
 
 			const savePopup = document.querySelector(".save-overlay")
-			const saveBtn = document.querySelector(".save-btn")
+			const saveBtn = document.querySelector(".save-btn button")
 			const selectBoxes = document.querySelectorAll(".dropdown")
 			const inputsDate = document.querySelectorAll("input")
 			const selectBoxLis = document.querySelectorAll("li")
@@ -448,7 +448,7 @@
 
 				const savePopup = document.querySelector(".save-overlay , .list-popup")
 				const saveBtn = document.querySelector(
-					".save-btn , .update-btn , .back-to-list"
+					".save-btn button , .update-btn button , .back-to-list button"
 				)
 				const selectBoxes = document.querySelectorAll(
 					".row:not(.new-row) .dropdown:not(.read-only)"
@@ -460,8 +460,7 @@
 					".new-row .dropdown:not(.read-only)"
 				)
 				useSelectBox([...newSelectedBoxes, ...selectBoxes])
-				// rerun the onChangeForBin function with the new row
-				onChangeForBin(updatedRows)
+
 				// rerun the onChangeForCreateNewPages functionality
 				const allSelectedBoxes = document.querySelectorAll(
 					".dropdown:not(.read-only)"

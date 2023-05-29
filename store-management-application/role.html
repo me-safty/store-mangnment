@@ -43,7 +43,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<tr class="row-1">
 									<td>1</td>
 									<td>Spinning Master</td>
 									<td>Spinning</td>
@@ -80,14 +80,10 @@
 									<td>
 										<button class="edit d-flex align-items-center gap-2 m-auto">
 											<img src="assets/inward/edit.svg" alt="edit" />Edit
-										</button>
-										<br />
-										<button class="del d-flex align-items-center gap-1 m-auto">
-											<img src="assets/inward/del.svg" alt="Delete" />Delete
 										</button>
 									</td>
 								</tr>
-								<tr>
+								<tr class="row-2">
 									<td>1</td>
 									<td>Spinning Master</td>
 									<td>Spinning</td>
@@ -124,14 +120,10 @@
 									<td>
 										<button class="edit d-flex align-items-center gap-2 m-auto">
 											<img src="assets/inward/edit.svg" alt="edit" />Edit
-										</button>
-										<br />
-										<button class="del d-flex align-items-center gap-1 m-auto">
-											<img src="assets/inward/del.svg" alt="Delete" />Delete
 										</button>
 									</td>
 								</tr>
-								<tr>
+								<tr class="row-3">
 									<td>1</td>
 									<td>Spinning Master</td>
 									<td>Spinning</td>
@@ -153,13 +145,13 @@
 									<td>
 										<span class="enable">Enable</span> <br />
 										<span class="disable">Disable</span> <br />
+										<span class="enable">Enable</span> <br />
+										<span class="enable">Enable</span> <br />
 										<span class="disable">Disable</span> <br />
-										<span class="enable">Enable</span> <br />
-										<span class="enable">Enable</span> <br />
 									</td>
 									<td>
 										<span class="enable">Enable</span> <br />
-										<span class="enable">Enable</span> <br />
+										<span class="disable">Disable</span> <br />
 										<span class="enable">Enable</span> <br />
 										<span class="disable">Disable</span> <br />
 										<span class="enable">Enable</span> <br />
@@ -168,10 +160,6 @@
 									<td>
 										<button class="edit d-flex align-items-center gap-2 m-auto">
 											<img src="assets/inward/edit.svg" alt="edit" />Edit
-										</button>
-										<br />
-										<button class="del d-flex align-items-center gap-1 m-auto">
-											<img src="assets/inward/del.svg" alt="Delete" />Delete
 										</button>
 									</td>
 								</tr>
@@ -198,7 +186,7 @@
 			</div>
 			<!-- create new popup -->
 			<div
-				class="overlay edit-popup master-popup list-popup details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+				class="popup-1 role-popup overlay edit-popup master-popup list-popup details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
 			>
 				<div class="details-popup bg-white">
 					<div class="head d-flex justify-content-between align-items-center">
@@ -240,78 +228,197 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Inward</td>
-										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
+										<td class="pages-col">
+											<p class="m-0">Inward</p>
+											<p class="m-0">Outward</p>
+											<p class="m-0">Return</p>
+											<p class="m-0">Replacement</p>
+											<p class="m-0">Master</p>
 										</td>
 										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
 										</td>
 										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
-										</td>
-									</tr>
-									<tr>
-										<td>Outward</td>
-										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Disable</span></div>
+											<div><span class="">Disable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
 										</td>
 										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
-										</td>
-										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
-										</td>
-									</tr>
-									<tr>
-										<td>Return</td>
-										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
-										</td>
-										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
-										</td>
-										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Disable</span></div>
+											<div><span class="">Enable</span></div>
 										</td>
 									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="save-btn-box">
+							<button class="back-to-list">Save & Update</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div
+				class="popup-2 role-popup overlay edit-popup master-popup list-popup details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+			>
+				<div class="details-popup bg-white">
+					<div class="head d-flex justify-content-between align-items-center">
+						<h1>Create New Product</h1>
+						<button class="close-btn">
+							<img src="assets/inward/close.svg" alt="close-button" />
+						</button>
+					</div>
+					<div class="body m-auto d-flex flex-column">
+						<div class="d-flex gap-5">
+							<div class="input-box p-0 w-50">
+								<p>Role Name <span>*</span></p>
+								<input
+									class="no-validation"
+									readonly
+									type="text"
+									placeholder="Spinning Master"
+								/>
+							</div>
+							<div class="input-box p-0 w-50">
+								<p>Department <span>*</span></p>
+								<input
+									class="no-validation"
+									readonly
+									type="text"
+									placeholder="Spinning"
+								/>
+							</div>
+						</div>
+						<div class="warper m-0 mt-4">
+							<table>
+								<thead>
 									<tr>
-										<td>Replacement</td>
-										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
+										<th>Pages</th>
+										<th>Edit</th>
+										<th>View</th>
+										<th>Delete</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="pages-col">
+											<p class="m-0">Inward</p>
+											<p class="m-0">Outward</p>
+											<p class="m-0">Return</p>
+											<p class="m-0">Replacement</p>
+											<p class="m-0">Master</p>
 										</td>
 										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
 										</td>
 										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Disable</span></div>
+											<div><span class="">Disable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+										</td>
+										<td>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Disable</span></div>
+											<div><span class="">Enable</span></div>
 										</td>
 									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="save-btn-box">
+							<button class="back-to-list">Save & Update</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div
+				class="popup-3 role-popup overlay edit-popup master-popup list-popup details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+			>
+				<div class="details-popup bg-white">
+					<div class="head d-flex justify-content-between align-items-center">
+						<h1>Create New Product</h1>
+						<button class="close-btn">
+							<img src="assets/inward/close.svg" alt="close-button" />
+						</button>
+					</div>
+					<div class="body m-auto d-flex flex-column">
+						<div class="d-flex gap-5">
+							<div class="input-box p-0 w-50">
+								<p>Role Name <span>*</span></p>
+								<input
+									class="no-validation"
+									readonly
+									type="text"
+									placeholder="Spinning Master"
+								/>
+							</div>
+							<div class="input-box p-0 w-50">
+								<p>Department <span>*</span></p>
+								<input
+									class="no-validation"
+									readonly
+									type="text"
+									placeholder="Spinning"
+								/>
+							</div>
+						</div>
+						<div class="warper m-0 mt-4">
+							<table>
+								<thead>
 									<tr>
-										<td>Master</td>
-										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
+										<th>Pages</th>
+										<th>Edit</th>
+										<th>View</th>
+										<th>Delete</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="pages-col">
+											<p class="m-0">Inward</p>
+											<p class="m-0">Outward</p>
+											<p class="m-0">Return</p>
+											<p class="m-0">Replacement</p>
+											<p class="m-0">Master</p>
 										</td>
 										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
 										</td>
 										<td>
-											<span class="enable active">Enable</span>
-											<span class="disable">Disable</span>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Disable</span></div>
+											<div><span class="">Disable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+										</td>
+										<td>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Enable</span></div>
+											<div><span class="">Disable</span></div>
+											<div><span class="">Enable</span></div>
 										</td>
 									</tr>
 								</tbody>
@@ -459,67 +566,66 @@
 
 			// edit popups
 			const editPopup = document.querySelector(".edit-popup")
-			const closeEditPopup = document.querySelector(".edit-popup .close-btn")
+			const rolePopups = document.querySelectorAll(".role-popup")
+			const rows = document.querySelectorAll(".role-page tbody tr")
 			const updatePopup = document.querySelector(".update-popup")
 			const closeUpdatePopupBtn = document.querySelector(
 				".update-popup .close-btn"
 			)
-			const editBtns = document.querySelectorAll(".list-page table .edit")
-			const updateBtn = document.querySelector(".edit-popup .back-to-list")
-			closeEditPopup.onclick = () => (editPopup.style.display = "none")
-			editBtns.forEach((btn) => {
-				btn.onclick = () => (editPopup.style.display = "flex")
-			})
-			updateBtn.onclick = () => {
-				editPopup.style.display = "none"
-				updatePopup.style.display = "flex"
-			}
-			closeUpdatePopupBtn.onclick = () => (updatePopup.style.display = "none")
+			rolePopups.forEach((popup, i) => {
+				const closeEditPopup = popup.children[0].children[0].children[1]
+				const updateBtn = popup.children[0].children[1].children[2].children[0]
+				const editBtn = rows[i].children[7].children[0]
+				const pagesStatus = document.querySelectorAll(`.row-${i + 1} td span`)
+				editBtn.addEventListener("click", () => {
+					popup.style.display = "flex"
+				})
 
-			// edit popup table btns
-			const tableBtns = document.querySelectorAll(".edit-popup td > span")
-			const enableBtns = document.querySelectorAll(
-				".edit-popup td > span.enable"
-			)
-			const disableBtns = document.querySelectorAll(
-				".edit-popup td > span.disable"
-			)
+				closeEditPopup.onclick = () => (popup.style.display = "none")
 
-			enableBtns.forEach((btn, i) => {
-				btn.onclick = () => {
-					btn.classList.toggle("active")
-					disableBtns[i].classList.toggle("active")
+				updateBtn.onclick = () => {
+					popup.style.display = "none"
+					updatePopup.style.display = "flex"
 				}
-			})
-			disableBtns.forEach((btn, i) => {
-				btn.onclick = () => {
-					btn.classList.toggle("active")
-					enableBtns[i].classList.toggle("active")
-				}
-			})
 
-			// edit-popup
-			const editPopup2 = document.querySelector(".edit-popup")
-			const successfullyEditPopup = document.querySelector(".update-popup")
-			const selectBoxesEditPopup = document.querySelectorAll(
-				".edit-popup .dropdown:not(.read-only)"
-			)
-			const inputsDateEditPopup = document.querySelectorAll(".edit-popup input")
-			const selectBoxLisEditPopup = document.querySelectorAll(".edit-popup li")
-			const saveBtnEditPopup = document.querySelector(
-				".edit-popup .back-to-list"
-			)
-			onChangeForCreateNewPages(
-				saveBtnEditPopup,
-				selectBoxesEditPopup,
-				inputsDateEditPopup,
-				selectBoxLisEditPopup,
-				() => {
-					editPopup2.style.display = "none"
-					successfullyEditPopup.style.display = "flex"
-				},
-				() => undefined
-			)
+				// edit popup table btns
+				const tableBtns = document.querySelectorAll(`.popup-${i + 1} td span`)
+				const enableBtns = document.querySelectorAll(
+					`.popup-${i + 1} td > span.enable`
+				)
+				const disableBtns = document.querySelectorAll(
+					`.popup-${i + 1} td > span.disable`
+				)
+				tableBtns.forEach((btn, i) => {
+					if (pagesStatus[i]?.classList.contains("enable")) {
+						btn.classList.remove("disable")
+						btn.classList.add("enable")
+						btn.innerHTML = "Enable"
+					} else if (pagesStatus[i]?.classList.contains("disable")) {
+						btn.classList.remove("enable")
+						btn.classList.add("disable")
+						btn.innerHTML = "Disable"
+					}
+					btn.addEventListener("click", () => {
+						if (btn?.classList.contains("enable")) {
+						btn.classList.add("disable")
+						btn.classList.remove("enable")
+						btn.innerHTML = "Disable"
+						pagesStatus[i]?.classList.add("disable")
+						pagesStatus[i]?.classList.remove("enable")
+						pagesStatus[i].innerHTML = "Disable"
+					} else if (btn?.classList.contains("disable")) {
+						btn.classList.add("enable")
+						btn.classList.remove("disable")
+						btn.innerHTML = "Enable"
+						pagesStatus[i]?.classList.add("enable")
+						pagesStatus[i]?.classList.remove("disable")
+						pagesStatus[i].innerHTML = "Enable"
+					}
+					}) 
+				})
+				closeUpdatePopupBtn.onclick = () => (updatePopup.style.display = "none")
+			})
 		</script>
 	</body>
 </html>
