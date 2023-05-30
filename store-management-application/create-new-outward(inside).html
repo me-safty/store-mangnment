@@ -406,6 +406,43 @@
 					</div>
 				</div>
 				`
+				// delete functionality
+				const deleteBtns = document.querySelectorAll(
+					".table .body .row img[alt=del]"
+				)
+				deleteBtns.forEach((btn) => {
+					const row = btn.parentElement.parentElement
+					btn.addEventListener("click", () => {
+						row.remove()
+
+						const savePopup = document.querySelector(
+							".save-overlay , .list-popup"
+						)
+						const saveBtn = document.querySelector(
+							".save-btn button , .update-btn button , .back-to-list button"
+						)
+						const selectBoxes = document.querySelectorAll(
+							".row:not(.new-row) .dropdown:not(.read-only)"
+						)
+						const inputsDate = document.querySelectorAll("input")
+						const selectBoxLis = document.querySelectorAll("li")
+						// rerun the onChangeForCreateNewPages functionality
+						const allSelectedBoxes = document.querySelectorAll(
+							".dropdown:not(.read-only)"
+						)
+						onChangeForCreateNewPages(
+							saveBtn,
+							allSelectedBoxes,
+							inputsDate,
+							selectBoxLis,
+							() => {
+								saveBtn.classList.add("active")
+								savePopup.style.display = "flex"
+							},
+							() => undefined
+						)
+					})
+				})
 				// update the inputs values after resiting
 				const updatedRows = document.querySelectorAll(".table .body .row")
 				updatedRows.forEach((row, i) => {
@@ -442,6 +479,41 @@
 					},
 					() => undefined
 				)
+			})
+
+			// delete functionality
+			const deleteBtns = document.querySelectorAll(
+				".table .body .row img[alt=del]"
+			)
+			deleteBtns.forEach((btn) => {
+				const row = btn.parentElement.parentElement
+				btn.addEventListener("click", () => {
+					row.remove()
+
+					const savePopup = document.querySelector(
+						".new-outward-page > .new-outward-overlay"
+					)
+					const saveBtn = document.querySelector(
+						".new-outward-page .save-btn button"
+					)
+					const saveBtnDiv = document.querySelector(
+						".new-outward-page .save-btn"
+					)
+					const selectBoxes = document.querySelectorAll(".dropdown")
+					const inputsDate = document.querySelectorAll("input")
+					const selectBoxLis = document.querySelectorAll("li")
+
+					onChangeForCreateNewPages(
+						saveBtn,
+						selectBoxes,
+						inputsDate,
+						selectBoxLis,
+						() => {
+							savePopup.style.display = "flex"
+						},
+						() => undefined
+					)
+				})
 			})
 		</script>
 	</body>
