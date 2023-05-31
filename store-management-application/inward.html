@@ -267,29 +267,52 @@
 			</div>
 			<!-- details popup -->
 			<div
-				class="overlay details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
+				class="overlay list-popup details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
 			>
 				<div class="details-popup bg-white">
 					<div class="head d-flex justify-content-between align-items-center">
-						<h1>Inward Details</h1>
+						<h1>Outward(Service) List</h1>
 						<button class="close-btn">
 							<img src="assets/inward/close.svg" alt="close-button" />
 						</button>
 					</div>
 					<div
-						class="body w-75 m-auto d-flex align-items-center justify-content-center flex-column"
+						class="body m-auto d-flex align-items-center justify-content-center flex-column"
 					>
 						<div
 							class="inputs d-flex align-items-center justify-content-center gap-10"
 						>
 							<div class="input-box w-50">
+								<p>Party From</p>
+								<input
+									class="no-validation"
+									readonly
+									type="text"
+									placeholder="Lucky Paper Code"
+								/>
+							</div>
+							<div class="input-box w-50">
+								<p>Invoice Number</p>
+								<input
+									class="no-validation"
+									readonly
+									type="text"
+									placeholder="22/11/2023"
+									value="101224842"
+								/>
+							</div>
+						</div>
+						<div
+							class="inputs d-flex align-items-center justify-content-center gap-10"
+						>
+							<div class="input-box w-50">
 								<p>Date</p>
-								<div class="d-flex justify-content-between data m-0 w-100 p-1">
+								<div class="d-flex w-100 data p-1 m-0 justify-content-around">
 									<input
-										type="text"
-										placeholder="23/11/2022"
 										readonly
-										class="w-100 no-validation"
+										class="no-validation"
+										type="text"
+										placeholder="22/11/2023"
 									/>
 									<img
 										class="pe-1"
@@ -298,18 +321,18 @@
 									/>
 								</div>
 							</div>
-							<div class="who-took input-box w-50">
-								<p>Who Took</p>
-								<div class="dropdown read-only">
-									<div class="select">
-										<span>Raja</span>
-										<div class="caret"></div>
+							<div class="input-box w-50">
+								<p>Total Amount</p>
+								<div
+									class="amount flex-nowrap d-flex align-items-center gap-2 justify-content-between"
+								>
+									<button class="mr-1">Rs</button>
+									<div
+										class="rs d-flex justify-content-betweenalign-items-center"
+									>
+										<input type="number" class="no-validation" readonly value="10.234" />
 									</div>
-									<ul class="menu">
-										<li>Raja</li>
-										<li>Raja</li>
-										<li>Raja</li>
-									</ul>
+									<input class="no-validation ps-3" type="number" readonly value="00" />
 								</div>
 							</div>
 						</div>
@@ -347,12 +370,7 @@
 								</div>
 								<div class="row">
 									<div class="col-4">Timing Belt 5mm</div>
-									<div class="col-4">101</div>
-									<div class="col-4">Spinning</div>
-								</div>
-								<div class="row">
-									<div class="col-4">Timing Belt 5mm</div>
-									<div class="col-4">101</div>
+									<div class="col-4">70</div>
 									<div class="col-4">Spinning</div>
 								</div>
 								<div class="row">
@@ -367,7 +385,7 @@
 								</div>
 							</div>
 						</div>
-						<button class="back-to-list">Back to list</button>
+						<button class="back-to-list">Back To List</button>
 					</div>
 				</div>
 			</div>
@@ -457,7 +475,7 @@
 		<script src="js/calender.js"></script>
 		<script>
 			const viewMoreBtns = document.querySelectorAll(
-				".list-page table td > span"
+				".list-page table td > span:not(.replace)"
 			)
 			const detailsPopup = document.querySelector(
 				".list-page .details-popup-overlay"
@@ -476,7 +494,7 @@
 			)
 			backToListBtn.onclick = () => {
 				detailsPopup.style.display = "none"
-				updatePopup.style.display = "flex"
+				// updatePopup.style.display = "flex"
 			}
 		</script>
 	</body>

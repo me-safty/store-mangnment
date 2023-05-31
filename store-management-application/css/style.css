@@ -1136,6 +1136,13 @@ tfoot td {
 	overflow: hidden;
 	border: 1px solid #7777774d;
 }
+.amount > button {
+	padding: 10px;
+	border: 1px solid var(--main-color) !important;
+	color: #fff;
+	border-radius: 6px;
+	background-color: var(--main-color);
+}
 .amount .rs button {
 	padding: 10px;
 	border: 1px solid var(--main-color) !important;
@@ -1587,6 +1594,13 @@ tfoot td {
 }
 .replacement-page td {
 	padding-block: 20px !important;
+}
+.replacement-page .input-box input.name {
+	border: 1px solid #7777774d;
+	border-radius: 5px;
+	width: 150px;
+	outline: none;
+	padding: 13px 10px;
 }
 @media (max-width: 1400px) {
 	.replacement-page thead th:first-child,

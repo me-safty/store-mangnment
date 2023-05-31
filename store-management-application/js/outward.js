@@ -59,5 +59,5 @@ const updatePopup = document.querySelector(".update-popup")
 const backToListBtn = document.querySelector(".details-popup .back-to-list")
 backToListBtn.onclick = () => {
 	detailsPopup.style.display = "none"
-	updatePopup.style.display = "flex"
+	// updatePopup.style.display = "flex"
 }

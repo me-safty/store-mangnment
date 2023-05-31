@@ -277,7 +277,6 @@
 							external: function (context) {
 								// Tooltip Element
 								let tooltipEl = document.getElementById("chartjs-tooltip")
-								console.log(tooltipEl)
 
 								// Create element on first render
 								if (!tooltipEl) {
@@ -310,7 +309,6 @@
 
 								// Set Text
 								if (tooltipModel.body) {
-									console.log(tooltipModel.dataPoints[0].raw)
 									const titleLines = tooltipModel.title || []
 									const bodyLines = tooltipModel.body.map(getBody)
 

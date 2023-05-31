@@ -83,7 +83,6 @@ function onChangeForCreateNewPages(
 	})
 
 	document.addEventListener("click", () => {
-		console.log(valuesLength, elementsNum)
 		trackSelectBoxAndInputChange()
 	})
 	trackSelectBoxAndInputChange()
