@@ -404,141 +404,141 @@
 			<div
 				class="overlay list-popup show-more details-popup-overlay position-fixed top-0 start-0 h-100 w-100 align-items-center justify-content-center"
 			>
-			<div class="details-popup bg-white">
-				<div class="head d-flex justify-content-between align-items-center">
-					<h1>Outward(Service) List</h1>
-					<button class="close-btn">
-						<img src="assets/inward/close.svg" alt="close-button" />
-					</button>
-				</div>
-				<div
-					class="body m-auto d-flex align-items-center justify-content-center flex-column"
-				>
+				<div class="details-popup bg-white">
+					<div class="head d-flex justify-content-between align-items-center">
+						<h1>Outward(Service) List</h1>
+						<button class="close-btn">
+							<img src="assets/inward/close.svg" alt="close-button" />
+						</button>
+					</div>
 					<div
-						class="inputs d-flex align-items-center justify-content-center gap-10"
+						class="body m-auto d-flex align-items-center justify-content-center flex-column"
 					>
-						<div class="input-box w-50">
-							<p>Party From</p>
-							<input
-								class="no-validation"
-								readonly
-								type="text"
-								placeholder="Lucky Paper Code"
-							/>
-						</div>
-						<div class="input-box w-50">
-							<p>Invoice Date</p>
-							<div class="d-flex w-100 data p-0 m-0 justify-content-around">
+						<div
+							class="inputs d-flex align-items-center justify-content-center gap-10"
+						>
+							<div class="input-box w-50">
+								<p>Party From</p>
 								<input
 									class="no-validation"
 									readonly
 									type="text"
-									placeholder="22/11/2023"
-								/>
-								<img
-									class="pe-1"
-									src="assets/inward/calender.svg"
-									alt="calender"
+									placeholder="Lucky Paper Code"
 								/>
 							</div>
-						</div>
-					</div>
-					<div
-						class="inputs d-flex align-items-center justify-content-center gap-10"
-					>
-						<div class="input-box w-50">
-							<p>Material Sending Date</p>
-							<div class="d-flex w-100 data p-1 m-0 justify-content-around">
-								<input
-									readonly
-									class="no-validation"
-									type="text"
-									placeholder="22/11/2023"
-								/>
-								<img
-									class="pe-1"
-									src="assets/inward/calender.svg"
-									alt="calender"
-								/>
-							</div>
-						</div>
-						<div class="input-box w-50">
-							<p>Material Receiving Date <span>*</span></p>
-							<div class="d-flex w-100 calender-box data p-1 m-0">
-								<input
-									type="text"
-									id="custom-date"
-									placeholder="DD-MM-YYYY"
-									readonly
-									class="w-100 p-2 no-validation "
-								/>
-								<img
-									class="pe-1"
-									src="assets/inward/calender.svg"
-									alt="calender"
-								/>
-							</div>
-						</div>
-					</div>
-					<div
-						class="inputs d-flex align-items-center justify-content-center gap-10"
-					>
-						<div class="input-box w-50">
-							<p>Invoice Number <span>*</span></p>
-							<input type="number" class="no-validation"/>
-						</div>
-						<div class="input-box w-50">
-							<p>Service Amount <span>*</span></p>
-							<div
-								class="amount flex-nowrap d-flex align-items-center gap-2 justify-content-between"
-							>
-								<div
-									class="rs d-flex justify-content-betweenalign-items-center"
-								>
-									<button>Rs</button>
-									<input class="no-validation" type="number" />
+							<div class="input-box w-50">
+								<p>Invoice Date</p>
+								<div class="d-flex w-100 data p-0 m-0 justify-content-around">
+									<input
+										class="no-validation"
+										readonly
+										type="text"
+										placeholder="22/11/2023"
+									/>
+									<img
+										class="pe-1"
+										src="assets/inward/calender.svg"
+										alt="calender"
+									/>
 								</div>
-								<input class="no-validation" type="number" />
 							</div>
 						</div>
+						<div
+							class="inputs d-flex align-items-center justify-content-center gap-10"
+						>
+							<div class="input-box w-50">
+								<p>Material Sending Date</p>
+								<div class="d-flex w-100 data p-1 m-0 justify-content-around">
+									<input
+										readonly
+										class="no-validation"
+										type="text"
+										placeholder="22/11/2023"
+									/>
+									<img
+										class="pe-1"
+										src="assets/inward/calender.svg"
+										alt="calender"
+									/>
+								</div>
+							</div>
+							<div class="input-box w-50">
+								<p>Material Receiving Date <span>*</span></p>
+								<div class="d-flex w-100 calender-box data p-1 m-0">
+									<input
+										type="text"
+										id="custom-date"
+										placeholder="DD-MM-YYYY"
+										readonly
+										class="w-100 p-2"
+									/>
+									<img
+										class="pe-1"
+										src="assets/inward/calender.svg"
+										alt="calender"
+									/>
+								</div>
+							</div>
+						</div>
+						<div
+							class="inputs d-flex align-items-center justify-content-center gap-10"
+						>
+							<div class="input-box w-50">
+								<p>Invoice Number <span>*</span></p>
+								<input type="number" />
+							</div>
+							<div class="input-box w-50">
+								<p>Service Amount <span>*</span></p>
+								<div
+									class="amount flex-nowrap d-flex align-items-center gap-2 justify-content-between"
+								>
+									<div
+										class="rs d-flex justify-content-betweenalign-items-center"
+									>
+										<button>Rs</button>
+										<input type="number" />
+									</div>
+									<input type="number" class="no-validation" />
+								</div>
+							</div>
+						</div>
+						<div class="table w-100">
+							<div class="row head">
+								<div class="col-4">Material</div>
+								<div class="col-4">Qty</div>
+								<div class="col-4">Department</div>
+							</div>
+							<div class="body">
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">243</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">255</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">265</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">215</div>
+									<div class="col-4">Spinning</div>
+								</div>
+								<div class="row">
+									<div class="col-4">Timing Belt 5mm</div>
+									<div class="col-4">70</div>
+									<div class="col-4">Spinning</div>
+								</div>
+							</div>
+						</div>
+						<button class="back-to-list">Back To List</button>
 					</div>
-					<div class="table w-100">
-						<div class="row head">
-							<div class="col-4">Material</div>
-							<div class="col-4">Qty</div>
-							<div class="col-4">Department</div>
-						</div>
-						<div class="body">
-							<div class="row">
-								<div class="col-4">Timing Belt 5mm</div>
-								<div class="col-4">243</div>
-								<div class="col-4">Spinning</div>
-							</div>
-							<div class="row">
-								<div class="col-4">Timing Belt 5mm</div>
-								<div class="col-4">255</div>
-								<div class="col-4">Spinning</div>
-							</div>
-							<div class="row">
-								<div class="col-4">Timing Belt 5mm</div>
-								<div class="col-4">265</div>
-								<div class="col-4">Spinning</div>
-							</div>
-							<div class="row">
-								<div class="col-4">Timing Belt 5mm</div>
-								<div class="col-4">215</div>
-								<div class="col-4">Spinning</div>
-							</div>
-							<div class="row">
-								<div class="col-4">Timing Belt 5mm</div>
-								<div class="col-4">70</div>
-								<div class="col-4">Spinning</div>
-							</div>
-						</div>
-					</div>
-					<button class="back-to-list">Back To List</button>
 				</div>
-			</div>
 			</div>
 			<!-- update popup -->
 			<div
@@ -577,15 +577,17 @@
 		<script src="js/onChangeForCreateNewPages.js"></script>
 		<script>
 			// approve
-	
-			const rows = document.querySelectorAll(".outward-service-page table tbody tr")
-			
-			rows.forEach(row => {
-				// const approves 
+
+			const rows = document.querySelectorAll(
+				".outward-service-page table tbody tr"
+			)
+
+			rows.forEach((row) => {
+				// const approves
 				let approvesNum = 0
 				const approvesTr = [...row.children[6].children]
 				const btn = row.children[7].children[0]
-				approvesTr.forEach(approveBox => {
+				approvesTr.forEach((approveBox) => {
 					const approve = approveBox.children[0]
 					if (approve.classList.contains("verified")) {
 						approvesNum++
@@ -635,9 +637,15 @@
 				btn.onclick = () => (detailsPopup.style.display = "flex")
 			})
 
-			const selectBoxes = document.querySelectorAll(".list-popup .dropdown")
-			const inputsDate = document.querySelectorAll(".list-popup input")
-			const selectBoxLis = document.querySelectorAll(".list-popup li")
+			const selectBoxes = document.querySelectorAll(
+				" .details-popup-overlay:not(.show-more) .dropdown"
+			)
+			const inputsDate = document.querySelectorAll(
+				".details-popup-overlay:not(.show-more) input"
+			)
+			const selectBoxLis = document.querySelectorAll(
+				".details-popup-overlay:not(.show-more) li"
+			)
 			onChangeForCreateNewPages(
 				backToListBtn,
 				selectBoxes,
@@ -667,10 +675,44 @@
 			const backToListBtn2 = document.querySelector(
 				".details-popup-overlay.show-more .back-to-list"
 			)
-			backToListBtn2.onclick = () => {
-				detailsPopup2.style.display = "none"
-				updatePopup2.style.display = "flex"
-			}
+
+			const selectBoxesShowMore = document.querySelectorAll(
+				".details-popup-overlay.show-more .dropdown"
+			)
+			const inputsDateShowMore = document.querySelectorAll(
+				".details-popup-overlay.show-more input"
+			)
+			const selectBoxLisShowMore = document.querySelectorAll(
+				".details-popup-overlay.show-more li"
+			)
+			onChangeForCreateNewPages(
+				backToListBtn2,
+				selectBoxesShowMore,
+				inputsDateShowMore,
+				selectBoxLisShowMore,
+				() => {
+					updatePopup.style.display = "flex"
+				},
+				() => undefined,
+				() => undefined,
+				() => {
+					// valuesLength global variable form onChangeForCreateNewPages.js file
+					if (valuesLength > 0) {
+						backToListBtn2.innerHTML = "update & continue"
+					} else {
+						backToListBtn2.addEventListener("click", () => {
+							detailsPopup2.style.display = "none"
+						})
+						backToListBtn2.style.cssText = "opacity: 1 !important"
+						backToListBtn2.disabled = false
+					}
+				}
+			)
+
+			// backToListBtn2.onclick = () => {
+			// 	detailsPopup2.style.display = "none"
+			// 	// updatePopup2.style.display = "flex"
+			// }
 		</script>
 	</body>
 </html>

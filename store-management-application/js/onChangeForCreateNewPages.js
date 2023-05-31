@@ -1,3 +1,5 @@
+let valuesLength = 0 
+let elementsNum = 0
 function onChangeForCreateNewPages(
 	saveBtn,
 	selectBoxes,
@@ -5,7 +7,8 @@ function onChangeForCreateNewPages(
 	selectBoxLis,
 	btnFunction,
 	callbackFunc,
-	callbackFuncIfFalse = () => undefined
+	callbackFuncIfFalse = () => undefined,
+	functionInside = () => undefined
 ) {
 	const inputsDate = []
 	allInputsDate.forEach((input) => {
@@ -16,8 +19,8 @@ function onChangeForCreateNewPages(
 
 	let selectedLis = []
 	let inputValues = []
-	let valuesLength = inputValues.length + selectedLis.length
-	let elementsNum = selectBoxes.length + inputsDate.length
+	valuesLength = inputValues.length + selectedLis.length
+	elementsNum = selectBoxes.length + inputsDate.length
 
 	// saveBtn.style.opacity = ".7"
 
@@ -48,6 +51,7 @@ function onChangeForCreateNewPages(
 			saveBtn.disabled = true
 			callbackFuncIfFalse()
 		}
+		functionInside()
 	}
 
 	saveBtn.onclick = () => {
