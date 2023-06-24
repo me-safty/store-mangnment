@@ -151,7 +151,8 @@ input.no-validation {
 }
 .login-page .login-img {
   width: 50%;
-  padding: 40px;
+  padding-inline: 40px;
+  height: 90%;
 }
 .login-page .login-img img {
   width: 100%;
@@ -433,7 +434,12 @@ header .close-sidebar-btn:hover {
   text-decoration: none;
   color: #000;
 }
+.dashboard-page .monthly,
+.dashboard-page .yearly {
+  margin-left: 15px;
+}
 .dashboard-page .monthly-report {
+  width: 600px;
   border-radius: 10px;
   border: 1px solid #7777773a;
   overflow: hidden;
